@@ -254,7 +254,7 @@ svg
 &lt;hr&gt;
 &lt;div class='footnotes'&gt;
 
-&lt;a id='1'&gt;1&lt;/a&gt; vgl. &lt;a href=&quot;http://t3n.de/magazin/javascript-bibliothek-d3-237224/&quot;&gt;http://t3n.de/magazin/javascript-bibliothek-d3-237224/&lt;/a&gt;&lt;br&gt;&lt;a id='2'&gt;2&lt;/a&gt; vgl. &lt;a href=&quot;https://www.linkedin.com/pulse/data-visualizations-using-d3js-brant-snow?trk=seokp_posts_primary_cluster_res_title&quot;&gt;https://www.linkedin.com/pulse/data-visualizations-using-d3js-brant-snow?trk=seokp_posts_primary_cluster_res_title&lt;/a&gt;&lt;br&gt;&lt;a id='3'&gt;3&lt;/a&gt;  vgl. &lt;a href=&quot;http://d3js.org/&quot;&gt;http://d3js.org/&lt;/a&gt;&lt;br&gt;&lt;a id='4'&gt;4&lt;/a&gt;  TEXT, JSON, XML, HTML, CSV, TSV&lt;br&gt;&lt;a id='5'&gt;5&lt;/a&gt; “A streamgraph […] is a type of stacked area graph which is displaced around a central axis, resulting in a flowing, organic shape.” (vgl. &lt;a href=&quot;https://en.wikipedia.org/wiki/Streamgraph&quot;&gt;https://en.wikipedia.org/wiki/Streamgraph&lt;/a&gt;)&lt;br&gt;&lt;a id='6'&gt;6&lt;/a&gt; “A chord diagram is a graphical method of displaying the inter-relationships between data in a matrix. The data is arranged radially around a circle with the relationships between the points typically drawn as arcs connecting the data together.” (vgl. &lt;a href=&quot;https://en.wikipedia.org/wiki/Chord_diagram&quot;&gt;https://en.wikipedia.org/wiki/Chord_diagram&lt;/a&gt;)&lt;br&gt;&lt;a id='7'&gt;7&lt;/a&gt;  “A choropleth map […] is a thematic map in which areas are shaded or patterned in proportion to the measurement of the statistical variable being displayed on the map, such as population density or per-capita income.” (vgl. &lt;a href=&quot;https://en.wikipedia.org/wiki/Choropleth_map&quot;&gt;https://en.wikipedia.org/wiki/Choropleth_map&lt;/a&gt;)&lt;br&gt;&lt;a id='8'&gt;8&lt;/a&gt;Genau wie in jQuery werden DOM-Elemente bei D3 anhand von CSS-Selektoren ausgewählt, allerdings werden diese im Umgang mit der Bilbliothek als “selections” bezeichnet. (vgl. &lt;a href=&quot;https://www.linkedin.com/pulse/data-visualizations-using-d3js-brant-snow?trk=seokp_posts_primary_cluster_res_title&quot;&gt;https://www.linkedin.com/pulse/data-visualizations-using-d3js-brant-snow?trk=seokp_posts_primary_cluster_res_title&lt;/a&gt;)&lt;br&gt;&lt;a id='9'&gt;9&lt;/a&gt; Für das Beispiel wurden die &lt;a href=&quot;http://ergast.com/api/f1/drivers.json&quot;&gt;Fahrerdaten&lt;/a&gt; der &lt;em&gt;experimental Motor Racing Developer API&lt;/em&gt; verwendet. Aus ihnen wurde ein Array mit Objekten, die zum einen die Nationalität und zum anderen, die Häufigkeit dieser Nationalität enthalten, an das D3-Skript übergeben. Das Barchart stellt später die Anzahl der Fahrer pro Nation dar.&lt;br&gt;&lt;a id='10'&gt;10&lt;/a&gt; Am Anfang des D3-Skripts wurde dieses Template importiert: &lt;code&gt;js import tpl from &amp;#39;../templates/filename.hbs&amp;#39;&lt;/code&gt;&lt;br&gt;&lt;a id='11'&gt;11&lt;/a&gt; Statt mit [0, height] wird also [height, 0] als Range definiert. (vgl. &lt;a href=&quot;https://www.linkedin.com/pulse/data-visualizations-using-d3js-brant-snow?trk=seokp_posts_primary_cluster_res_title&quot;&gt;https://www.linkedin.com/pulse/data-visualizations-using-d3js-brant-snow?trk=seokp_posts_primary_cluster_res_title&lt;/a&gt;)&lt;br&gt;&lt;a id='12'&gt;12&lt;/a&gt; “It is a methodology in svg to group shapes together.”
+&lt;a id='1'&gt;1&lt;/a&gt; vgl. &lt;a href=&quot;http://t3n.de/magazin/javascript-bibliothek-d3-237224/&quot;&gt;http://t3n.de/magazin/javascript-bibliothek-d3-237224/&lt;/a&gt;&lt;br&gt;&lt;a id='2'&gt;2&lt;/a&gt; vgl. &lt;a href=&quot;https://www.linkedin.com/pulse/data-visualizations-using-d3js-brant-snow?trk=seokp_posts_primary_cluster_res_title&quot;&gt;https://www.linkedin.com/pulse/data-visualizations-using-d3js-brant-snow?trk=seokp_posts_primary_cluster_res_title&lt;/a&gt;&lt;br&gt;&lt;a id='3'&gt;3&lt;/a&gt;  vgl. &lt;a href=&quot;http://d3js.org/&quot;&gt;http://d3js.org/&lt;/a&gt;&lt;br&gt;&lt;a id='4'&gt;4&lt;/a&gt;  TEXT, JSON, XML, HTML, CSV, TSV&lt;br&gt;&lt;a id='5'&gt;5&lt;/a&gt; “A streamgraph […] is a type of stacked area graph which is displaced around a central axis, resulting in a flowing, organic shape.” (vgl. &lt;a href=&quot;https://en.wikipedia.org/wiki/Streamgraph&quot;&gt;https://en.wikipedia.org/wiki/Streamgraph&lt;/a&gt;)&lt;br&gt;&lt;a id='6'&gt;6&lt;/a&gt; “A chord diagram is a graphical method of displaying the inter-relationships between data in a matrix. The data is arranged radially around a circle with the relationships between the points typically drawn as arcs connecting the data together.” (vgl. &lt;a href=&quot;https://en.wikipedia.org/wiki/Chord_diagram&quot;&gt;https://en.wikipedia.org/wiki/Chord_diagram&lt;/a&gt;)&lt;br&gt;&lt;a id='7'&gt;7&lt;/a&gt; “A choropleth map […] is a thematic map in which areas are shaded or patterned in proportion to the measurement of the statistical variable being displayed on the map, such as population density or per-capita income.” (vgl. &lt;a href=&quot;https://en.wikipedia.org/wiki/Choropleth_map&quot;&gt;https://en.wikipedia.org/wiki/Choropleth_map&lt;/a&gt;)&lt;br&gt;&lt;a id='8'&gt;8&lt;/a&gt;Genau wie in jQuery werden DOM-Elemente bei D3 anhand von CSS-Selektoren ausgewählt, allerdings werden diese im Umgang mit der Bilbliothek als “selections” bezeichnet. (vgl. &lt;a href=&quot;https://www.linkedin.com/pulse/data-visualizations-using-d3js-brant-snow?trk=seokp_posts_primary_cluster_res_title&quot;&gt;https://www.linkedin.com/pulse/data-visualizations-using-d3js-brant-snow?trk=seokp_posts_primary_cluster_res_title&lt;/a&gt;)&lt;br&gt;&lt;a id='9'&gt;9&lt;/a&gt; Für das Beispiel wurden die &lt;a href=&quot;http://ergast.com/api/f1/drivers.json&quot;&gt;Fahrerdaten&lt;/a&gt; der &lt;em&gt;experimental Motor Racing Developer API&lt;/em&gt; verwendet. Aus ihnen wurde ein Array mit Objekten, die zum einen die Nationalität und zum anderen, die Häufigkeit dieser Nationalität enthalten, an das D3-Skript übergeben. Das Barchart stellt später die Anzahl der Fahrer pro Nation dar.&lt;br&gt;&lt;a id='10'&gt;10&lt;/a&gt; Am Anfang des D3-Skripts wurde dieses Template importiert: &lt;code&gt;js import tpl from &amp;#39;../templates/filename.hbs&amp;#39;&lt;/code&gt;&lt;br&gt;&lt;a id='11'&gt;11&lt;/a&gt; Statt mit [0, height] wird also [height, 0] als Range definiert. (vgl. &lt;a href=&quot;https://www.linkedin.com/pulse/data-visualizations-using-d3js-brant-snow?trk=seokp_posts_primary_cluster_res_title&quot;&gt;https://www.linkedin.com/pulse/data-visualizations-using-d3js-brant-snow?trk=seokp_posts_primary_cluster_res_title&lt;/a&gt;)&lt;br&gt;&lt;a id='12'&gt;12&lt;/a&gt; “It is a methodology in svg to group shapes together.”
 &lt;a id='13'&gt;13&lt;/a&gt; vgl. &lt;a href=&quot;http://alignedleft.com/tutorials/d3/binding-data&quot;&gt;http://alignedleft.com/tutorials/d3/binding-data&lt;/a&gt;
 &lt;/div&gt;  
 </description>
@@ -265,65 +265,10 @@ svg
       <pubDate>Tue, 05 Jan 2016 01:00:00 +0100</pubDate>
       <guid isPermaLink="true">http://localhost:8080/articles/typo3/</guid>
       <author></author>
-      <description>&lt;p&gt;&lt;img src='https://upload.wikimedia.org/wikipedia/commons/5/58/Logo_TYPO3.svg' height='275px' /&gt;&lt;/p&gt;
-&lt;p&gt;Ein kurzer Überblick über das Content-Management-System Typo3.&lt;/p&gt;
+      <description>&lt;p&gt;&lt;img src='https://upload.wikimedia.org/wikipedia/commons/5/58/Logo_TYPO3.svg' height='265px' /&gt;&lt;/p&gt;
+&lt;p&gt;Ein wirklich ganz kurzer Überblick über das Content-Management-System Typo3. &lt;/p&gt;
 &lt;p&gt;&lt;span class=&quot;more&quot;&gt;&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;Gründe für Frameworks: Sicherheitsaspekte, sauberer Request/Response Flow (MVC-Pattern), Wiederverwendbarkeit, Organisation, Bundles (Libraries), –&amp;gt; Produktivität&lt;/p&gt;
-&lt;p&gt;“Build your App, not your Tools”&lt;/p&gt;
-&lt;p&gt;Symfony Request Flow: 
-Request an Front Controller
-geht an
-Symfony Kernel = Routing, Rendering, Events auslösen (z.B. Mails versenden), Firewall
-sendet Response &lt;/p&gt;
-&lt;p&gt;Request -&amp;gt; ChainRouter(Nutzerverwaltung) oder DynamicRouter(CMS Content) -&amp;gt; Controller -&amp;gt; Model -&amp;gt; View -&amp;gt; Response&lt;/p&gt;
-&lt;p&gt;Nachteile von Frameworks: ohne Caching im System sehr langsam (bootstrap on every request), komplexe Codebase –&amp;gt; steile Lernkurve&lt;/p&gt;
-&lt;p&gt;Symfony Overview:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;request/response flow&lt;/li&gt;
-&lt;li&gt;full stack or single components&lt;/li&gt;
-&lt;li&gt;common patterns&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Full Stack: Composed of components (HTTPFoundation, Routing, Form, Twig Templating, Form, ..)&lt;/p&gt;
-&lt;p&gt;PHPCR&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Implementation of JCR&lt;/li&gt;
-&lt;li&gt;kompatibel zu Java&lt;/li&gt;
-&lt;li&gt;standardisierte API&lt;/li&gt;
-&lt;li&gt;Features: tree access (hierarchischer content, jeder node object in DB), access by uuid, versioning, locking, xmp import and export (einfaches Umziehen von Daten, ohne lästige Migrationen), search nodes&lt;/li&gt;
-&lt;li&gt;“RDBMS are not a good fit for CMS Data, that is mostly unstructured, hurray for PHPCR” &lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Symfony CMF&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;set of Symfony bundles (routing, menu, ..)&lt;/li&gt;
-&lt;li&gt;Base for CMS functionality&lt;/li&gt;
-&lt;li&gt;leichtes nachbauen von CMS-Funktionalität in bestehenden Applicationen&lt;/li&gt;
-&lt;li&gt;Code sharing, well tested&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Symfony in CMS:&lt;/p&gt;
-&lt;p&gt;SULU&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;symfony full stack&lt;/li&gt;
-&lt;li&gt;semantische Konfiguration von Templates in XML&lt;/li&gt;
-&lt;li&gt;live preview &lt;/li&gt;
-&lt;li&gt;eigene Modul mit bundles dazu bauen&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://sulu.io&quot;&gt;http://sulu.io&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;EZ Platform&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;full stack symfony&lt;/li&gt;
-&lt;li&gt;uses symfony  CMF Router&lt;/li&gt;
-&lt;li&gt;flexible content elements&lt;/li&gt;
-&lt;li&gt;Documents saved as DocBook (XML-Format) –&amp;gt; leider nicht PHPCR Standard, sondern eigen&lt;/li&gt;
-&lt;li&gt;strukturiert in bundles&lt;/li&gt;
-&lt;li&gt;ezplatform.com&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Drupal 8&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;symfony componenets&lt;/li&gt;
-&lt;li&gt;Altlasten bleiben bestehen&lt;/li&gt;
-&lt;li&gt;Rich Admin interface editors (Redakteure mehr Freiheit)&lt;/li&gt;
-&lt;li&gt;array of doom theme config &lt;/li&gt;
-&lt;/ul&gt;
+&lt;h4 id=&quot;-die-typo3-community-hat-probleme-sup-1-1-sup-&quot;&gt;“Die Typo3 Community hat Probleme” &lt;sup&gt;&lt;a href=&quot;#1&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/h4&gt;
 &lt;p&gt;NEOS
  “Typo3 Community hat Probleme”&lt;/p&gt;
 &lt;ul&gt;
@@ -341,6 +286,9 @@ sendet Response &lt;/p&gt;
 &lt;li&gt;schlechtes Datenbank design&lt;/li&gt;
 &lt;li&gt;symfony console crippled (Eigenentwicklung)&lt;/li&gt;
 &lt;/ul&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;div class='footnotes'&gt;
+    &lt;a id='1'&gt;1&lt;/a&gt; Patrik Karisch, Webentwickler bei der pixelart GmbH, 68506 Salzburg, “Vorstellung Symphony Framework”, 19.01.2016&lt;/p&gt;
 </description>
     </item>
   </channel>

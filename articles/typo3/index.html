@@ -22,65 +22,10 @@
     <div id="content">
       <div class="content-wrap">
         <article class="article">
-          <section class="content"><p><img src='https://upload.wikimedia.org/wikipedia/commons/5/58/Logo_TYPO3.svg' height='275px' /></p>
-<p>Ein kurzer Überblick über das Content-Management-System&nbsp;Typo3.</p>
+          <section class="content"><p><img src='https://upload.wikimedia.org/wikipedia/commons/5/58/Logo_TYPO3.svg' height='265px' /></p>
+<p>Ein wirklich ganz kurzer Überblick über das Content-Management-System&nbsp;Typo3. </p>
 <p><span class="more"></span></p>
-<p>Gründe für Frameworks: Sicherheitsaspekte, sauberer Request/Response Flow (<span class="caps">MVC</span>-Pattern), Wiederverwendbarkeit, Organisation, Bundles (Libraries), –&gt;&nbsp;Produktivität</p>
-<p>“Build your App, not your&nbsp;Tools”</p>
-<p>Symfony Request Flow: 
-Request an Front Controller
-geht an
-Symfony Kernel = Routing, Rendering, Events auslösen (z.B. Mails versenden), Firewall
-sendet&nbsp;Response </p>
-<p>Request -&gt; ChainRouter(Nutzerverwaltung) oder DynamicRouter(<span class="caps">CMS</span> Content) -&gt; Controller -&gt; Model -&gt; View -&gt;&nbsp;Response</p>
-<p>Nachteile von Frameworks: ohne Caching im System sehr langsam (bootstrap on every request), komplexe Codebase –&gt; steile&nbsp;Lernkurve</p>
-<p>Symfony&nbsp;Overview:</p>
-<ul>
-<li>request/response&nbsp;flow</li>
-<li>full stack or single&nbsp;components</li>
-<li>common&nbsp;patterns</li>
-</ul>
-<p>Full Stack: Composed of components (HTTPFoundation, Routing, Form, Twig Templating, Form,&nbsp;..)</p>
-<p><span class="caps">PHPCR</span></p>
-<ul>
-<li>Implementation of&nbsp;<span class="caps">JCR</span></li>
-<li>kompatibel zu&nbsp;Java</li>
-<li>standardisierte&nbsp;<span class="caps">API</span></li>
-<li>Features: tree access (hierarchischer content, jeder node object in <span class="caps">DB</span>), access by uuid, versioning, locking, xmp import and export (einfaches Umziehen von Daten, ohne lästige Migrationen), search&nbsp;nodes</li>
-<li>“<span class="caps">RDBMS</span> are not a good fit for CMS Data, that is mostly unstructured, hurray for&nbsp;PHPCR” </li>
-</ul>
-<p>Symfony&nbsp;<span class="caps">CMF</span></p>
-<ul>
-<li>set of Symfony bundles (routing, menu,&nbsp;..)</li>
-<li>Base for <span class="caps">CMS</span>&nbsp;functionality</li>
-<li>leichtes nachbauen von <span class="caps">CMS</span>-Funktionalität in bestehenden&nbsp;Applicationen</li>
-<li>Code sharing, well&nbsp;tested</li>
-</ul>
-<p>Symfony in&nbsp;<span class="caps">CMS</span>:</p>
-<p><span class="caps">SULU</span></p>
-<ul>
-<li>symfony full&nbsp;stack</li>
-<li>semantische Konfiguration von Templates in&nbsp;<span class="caps">XML</span></li>
-<li>live&nbsp;preview </li>
-<li>eigene Modul mit bundles dazu&nbsp;bauen</li>
-<li><a href="http://sulu.io">http://sulu.io</a></li>
-</ul>
-<p><span class="caps">EZ</span>&nbsp;Platform</p>
-<ul>
-<li>full stack&nbsp;symfony</li>
-<li>uses symfony  <span class="caps">CMF</span>&nbsp;Router</li>
-<li>flexible content&nbsp;elements</li>
-<li>Documents saved as DocBook (<span class="caps">XML</span>-Format) –&gt; leider nicht PHPCR Standard, sondern&nbsp;eigen</li>
-<li>strukturiert in&nbsp;bundles</li>
-<li>ezplatform.com</li>
-</ul>
-<p>Drupal&nbsp;8</p>
-<ul>
-<li>symfony&nbsp;componenets</li>
-<li>Altlasten bleiben&nbsp;bestehen</li>
-<li>Rich Admin interface editors (Redakteure mehr&nbsp;Freiheit)</li>
-<li>array of doom theme&nbsp;config </li>
-</ul>
+<h4 id="-die-typo3-community-hat-probleme-sup-1-1-sup-">“Die Typo3 Community hat Probleme” <sup><a href="#1">1</a></sup></h4>
 <p><span class="caps">NEOS</span>
  “Typo3 Community hat&nbsp;Probleme”</p>
 <ul>
@@ -98,6 +43,9 @@ sendet&nbsp;Response </p>
 <li>schlechtes Datenbank&nbsp;design</li>
 <li>symfony console crippled&nbsp;(Eigenentwicklung)</li>
 </ul>
+<hr>
+<p><div class='footnotes'>
+    <a id='1'>1</a> Patrik Karisch, Webentwickler bei der pixelart GmbH, 68506 Salzburg, “Vorstellung Symphony Framework”,&nbsp;19.01.2016</p>
 </section>
         </article>
       </div>
