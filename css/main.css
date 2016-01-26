@@ -433,6 +433,14 @@ svg {
 
 svg rect.bar {
     fill: #f24a5d;
+    -moz-transition: all .2s ease-in;
+    -o-transition: all .2s ease-in;
+    -webkit-transition: all .2s ease-in;
+    transition: all .2s ease-in;
+}
+
+svg rect.bar:hover {
+  fill:#FF9932;
 }
 
 article.intro svg {

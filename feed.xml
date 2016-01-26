@@ -63,12 +63,210 @@ Beispiele hierfür sind die &lt;a href=&quot;https://www.whitehouse.gov/&quot;&g
 </description>
     </item>
     <item>
+      <title>D3 Data-Driven Documents</title>
+      <link>http://localhost:8080/articles/d3/</link>
+      <pubDate>Mon, 11 Jan 2016 01:00:00 +0100</pubDate>
+      <guid isPermaLink="true">http://localhost:8080/articles/d3/</guid>
+      <author></author>
+      <description>&lt;div class=&quot;row&quot;&gt;
+  &lt;div class=&quot;col-sm-6&quot; id=&quot;task01&quot;&gt;&lt;svg viewBox=&quot;0 0 800 600&quot; id=&quot;chart-aad68792-9265-4db3-af5c-cd526f0f3673&quot;&gt;
+  &lt;g transform=&quot;&quot;/&gt;
+&lt;g class=&quot;x axis&quot; transform=&quot;translate(55, 450)&quot;&gt;&lt;g class=&quot;tick&quot; style=&quot;opacity: 1;&quot; transform=&quot;translate(44,0)&quot;&gt;&lt;line y2=&quot;6&quot; x2=&quot;0&quot;/&gt;&lt;text dy=&quot;.5em&quot; style=&quot;text-anchor: end;&quot; y=&quot;9&quot; x=&quot;0&quot; dx=&quot;-.5em&quot; transform=&quot;rotate(-45)&quot;&gt;Italian&lt;/text&gt;&lt;/g&gt;&lt;g class=&quot;tick&quot; style=&quot;opacity: 1;&quot; transform=&quot;translate(117,0)&quot;&gt;&lt;line y2=&quot;6&quot; x2=&quot;0&quot;/&gt;&lt;text dy=&quot;.5em&quot; style=&quot;text-anchor: end;&quot; y=&quot;9&quot; x=&quot;0&quot; dx=&quot;-.5em&quot; transform=&quot;rotate(-45)&quot;&gt;British&lt;/text&gt;&lt;/g&gt;&lt;g class=&quot;tick&quot; style=&quot;opacity: 1;&quot; transform=&quot;translate(190,0)&quot;&gt;&lt;line y2=&quot;6&quot; x2=&quot;0&quot;/&gt;&lt;text dy=&quot;.5em&quot; style=&quot;text-anchor: end;&quot; y=&quot;9&quot; x=&quot;0&quot; dx=&quot;-.5em&quot; transform=&quot;rotate(-45)&quot;&gt;Belgian&lt;/text&gt;&lt;/g&gt;&lt;g class=&quot;tick&quot; style=&quot;opacity: 1;&quot; transform=&quot;translate(263,0)&quot;&gt;&lt;line y2=&quot;6&quot; x2=&quot;0&quot;/&gt;&lt;text dy=&quot;.5em&quot; style=&quot;text-anchor: end;&quot; y=&quot;9&quot; x=&quot;0&quot; dx=&quot;-.5em&quot; transform=&quot;rotate(-45)&quot;&gt;American&lt;/text&gt;&lt;/g&gt;&lt;g class=&quot;tick&quot; style=&quot;opacity: 1;&quot; transform=&quot;translate(336,0)&quot;&gt;&lt;line y2=&quot;6&quot; x2=&quot;0&quot;/&gt;&lt;text dy=&quot;.5em&quot; style=&quot;text-anchor: end;&quot; y=&quot;9&quot; x=&quot;0&quot; dx=&quot;-.5em&quot; transform=&quot;rotate(-45)&quot;&gt;German&lt;/text&gt;&lt;/g&gt;&lt;g class=&quot;tick&quot; style=&quot;opacity: 1;&quot; transform=&quot;translate(409,0)&quot;&gt;&lt;line y2=&quot;6&quot; x2=&quot;0&quot;/&gt;&lt;text dy=&quot;.5em&quot; style=&quot;text-anchor: end;&quot; y=&quot;9&quot; x=&quot;0&quot; dx=&quot;-.5em&quot; transform=&quot;rotate(-45)&quot;&gt;Dutch&lt;/text&gt;&lt;/g&gt;&lt;g class=&quot;tick&quot; style=&quot;opacity: 1;&quot; transform=&quot;translate(482,0)&quot;&gt;&lt;line y2=&quot;6&quot; x2=&quot;0&quot;/&gt;&lt;text dy=&quot;.5em&quot; style=&quot;text-anchor: end;&quot; y=&quot;9&quot; x=&quot;0&quot; dx=&quot;-.5em&quot; transform=&quot;rotate(-45)&quot;&gt;French&lt;/text&gt;&lt;/g&gt;&lt;g class=&quot;tick&quot; style=&quot;opacity: 1;&quot; transform=&quot;translate(555,0)&quot;&gt;&lt;line y2=&quot;6&quot; x2=&quot;0&quot;/&gt;&lt;text dy=&quot;.5em&quot; style=&quot;text-anchor: end;&quot; y=&quot;9&quot; x=&quot;0&quot; dx=&quot;-.5em&quot; transform=&quot;rotate(-45)&quot;&gt;Spanish&lt;/text&gt;&lt;/g&gt;&lt;g class=&quot;tick&quot; style=&quot;opacity: 1;&quot; transform=&quot;translate(628,0)&quot;&gt;&lt;line y2=&quot;6&quot; x2=&quot;0&quot;/&gt;&lt;text dy=&quot;.5em&quot; style=&quot;text-anchor: end;&quot; y=&quot;9&quot; x=&quot;0&quot; dx=&quot;-.5em&quot; transform=&quot;rotate(-45)&quot;&gt;New Zealander&lt;/text&gt;&lt;/g&gt;&lt;g class=&quot;tick&quot; style=&quot;opacity: 1;&quot; transform=&quot;translate(701,0)&quot;&gt;&lt;line y2=&quot;6&quot; x2=&quot;0&quot;/&gt;&lt;text dy=&quot;.5em&quot; style=&quot;text-anchor: end;&quot; y=&quot;9&quot; x=&quot;0&quot; dx=&quot;-.5em&quot; transform=&quot;rotate(-45)&quot;&gt;Swedish&lt;/text&gt;&lt;/g&gt;&lt;path class=&quot;domain&quot; d=&quot;M-4,6V0H745V4&quot;/&gt;&lt;/g&gt;&lt;g class=&quot;y axis&quot; transform=&quot;translate(55, 0)&quot;&gt;&lt;g class=&quot;tick&quot; style=&quot;opacity: 1;&quot; transform=&quot;translate(0,450)&quot;&gt;&lt;line x2=&quot;-6&quot; y2=&quot;0&quot;/&gt;&lt;text dy=&quot;.32em&quot; style=&quot;text-anchor: end;&quot; x=&quot;-9&quot; y=&quot;0&quot;&gt;0&lt;/text&gt;&lt;/g&gt;&lt;g class=&quot;tick&quot; style=&quot;opacity: 1;&quot; transform=&quot;translate(0,400)&quot;&gt;&lt;line x2=&quot;-6&quot; y2=&quot;0&quot;/&gt;&lt;text dy=&quot;.32em&quot; style=&quot;text-anchor: end;&quot; x=&quot;-9&quot; y=&quot;0&quot;&gt;1&lt;/text&gt;&lt;/g&gt;&lt;g class=&quot;tick&quot; style=&quot;opacity: 1;&quot; transform=&quot;translate(0,350)&quot;&gt;&lt;line x2=&quot;-6&quot; y2=&quot;0&quot;/&gt;&lt;text dy=&quot;.32em&quot; style=&quot;text-anchor: end;&quot; x=&quot;-9&quot; y=&quot;0&quot;&gt;2&lt;/text&gt;&lt;/g&gt;&lt;g class=&quot;tick&quot; style=&quot;opacity: 1;&quot; transform=&quot;translate(0,300.00000000000006)&quot;&gt;&lt;line x2=&quot;-6&quot; y2=&quot;0&quot;/&gt;&lt;text dy=&quot;.32em&quot; style=&quot;text-anchor: end;&quot; x=&quot;-9&quot; y=&quot;0&quot;&gt;3&lt;/text&gt;&lt;/g&gt;&lt;g class=&quot;tick&quot; style=&quot;opacity: 1;&quot; transform=&quot;translate(0,250)&quot;&gt;&lt;line x2=&quot;-6&quot; y2=&quot;0&quot;/&gt;&lt;text dy=&quot;.32em&quot; style=&quot;text-anchor: end;&quot; x=&quot;-9&quot; y=&quot;0&quot;&gt;4&lt;/text&gt;&lt;/g&gt;&lt;g class=&quot;tick&quot; style=&quot;opacity: 1;&quot; transform=&quot;translate(0,200)&quot;&gt;&lt;line x2=&quot;-6&quot; y2=&quot;0&quot;/&gt;&lt;text dy=&quot;.32em&quot; style=&quot;text-anchor: end;&quot; x=&quot;-9&quot; y=&quot;0&quot;&gt;5&lt;/text&gt;&lt;/g&gt;&lt;g class=&quot;tick&quot; style=&quot;opacity: 1;&quot; transform=&quot;translate(0,150.00000000000003)&quot;&gt;&lt;line x2=&quot;-6&quot; y2=&quot;0&quot;/&gt;&lt;text dy=&quot;.32em&quot; style=&quot;text-anchor: end;&quot; x=&quot;-9&quot; y=&quot;0&quot;&gt;6&lt;/text&gt;&lt;/g&gt;&lt;g class=&quot;tick&quot; style=&quot;opacity: 1;&quot; transform=&quot;translate(0,100)&quot;&gt;&lt;line x2=&quot;-6&quot; y2=&quot;0&quot;/&gt;&lt;text dy=&quot;.32em&quot; style=&quot;text-anchor: end;&quot; x=&quot;-9&quot; y=&quot;0&quot;&gt;7&lt;/text&gt;&lt;/g&gt;&lt;g class=&quot;tick&quot; style=&quot;opacity: 1;&quot; transform=&quot;translate(0,50.00000000000002)&quot;&gt;&lt;line x2=&quot;-6&quot; y2=&quot;0&quot;/&gt;&lt;text dy=&quot;.32em&quot; style=&quot;text-anchor: end;&quot; x=&quot;-9&quot; y=&quot;0&quot;&gt;8&lt;/text&gt;&lt;/g&gt;&lt;g class=&quot;tick&quot; style=&quot;opacity: 1;&quot; transform=&quot;translate(0,8)&quot;&gt;&lt;line x2=&quot;-6&quot; y2=&quot;0&quot;/&gt;&lt;text dy=&quot;.32em&quot; style=&quot;text-anchor: end;&quot; x=&quot;-9&quot; y=&quot;0&quot;&gt;9&lt;/text&gt;&lt;/g&gt;&lt;path class=&quot;domain&quot; d=&quot;M-3,0H0V450H-4&quot;/&gt;&lt;text transform=&quot;rotate(-90)&quot; y=&quot;6&quot; dy=&quot;0.71em&quot; style=&quot;text-anchor: end;&quot;&gt;Count&lt;/text&gt;&lt;/g&gt;&lt;rect class=&quot;bar&quot; x=&quot;66&quot; width=&quot;66&quot; y=&quot;200&quot; height=&quot;250&quot;/&gt;&lt;rect class=&quot;bar&quot; x=&quot;139&quot; width=&quot;66&quot; y=&quot;200&quot; height=&quot;250&quot;/&gt;&lt;rect class=&quot;bar&quot; x=&quot;212&quot; width=&quot;66&quot; y=&quot;400&quot; height=&quot;50&quot;/&gt;&lt;rect class=&quot;bar&quot; x=&quot;285&quot; width=&quot;66&quot; y=&quot;0&quot; height=&quot;450&quot;/&gt;&lt;rect class=&quot;bar&quot; x=&quot;358&quot; width=&quot;66&quot; y=&quot;350&quot; height=&quot;100&quot;/&gt;&lt;rect class=&quot;bar&quot; x=&quot;431&quot; width=&quot;66&quot; y=&quot;400&quot; height=&quot;50&quot;/&gt;&lt;rect class=&quot;bar&quot; x=&quot;504&quot; width=&quot;66&quot; y=&quot;300.00000000000006&quot; height=&quot;149.99999999999994&quot;/&gt;&lt;rect class=&quot;bar&quot; x=&quot;577&quot; width=&quot;66&quot; y=&quot;350&quot; height=&quot;100&quot;/&gt;&lt;rect class=&quot;bar&quot; x=&quot;650&quot; width=&quot;66&quot; y=&quot;400&quot; height=&quot;50&quot;/&gt;&lt;rect class=&quot;bar&quot; x=&quot;723&quot; width=&quot;66&quot; y=&quot;400&quot; height=&quot;50&quot;/&gt;&lt;/svg&gt;
+    &lt;table class=&quot;table&quot;&gt;
+      &lt;thead&gt;
+      &lt;tr&gt;&lt;th class=&quot;text-left&quot;&gt;Nationality&lt;/th&gt;
+      &lt;th class=&quot;text-center&quot;&gt;Count&lt;/th&gt;&lt;br&gt;      &lt;/tr&gt;&lt;/thead&gt;
+      &lt;tbody&gt;
+        &lt;tr&gt;
+          &lt;td class=&quot;text-left&quot;&gt;Italian&lt;/td&gt;
+          &lt;td class=&quot;text-center&quot;&gt;5&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;td class=&quot;text-left&quot;&gt;British&lt;/td&gt;
+          &lt;td class=&quot;text-center&quot;&gt;5&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;td class=&quot;text-left&quot;&gt;Belgian&lt;/td&gt;
+          &lt;td class=&quot;text-center&quot;&gt;1&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;td class=&quot;text-left&quot;&gt;American&lt;/td&gt;
+          &lt;td class=&quot;text-center&quot;&gt;9&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;td class=&quot;text-left&quot;&gt;German&lt;/td&gt;
+          &lt;td class=&quot;text-center&quot;&gt;2&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;td class=&quot;text-left&quot;&gt;Dutch&lt;/td&gt;
+          &lt;td class=&quot;text-center&quot;&gt;1&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;td class=&quot;text-left&quot;&gt;French&lt;/td&gt;
+          &lt;td class=&quot;text-center&quot;&gt;3&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;td class=&quot;text-left&quot;&gt;Spanish&lt;/td&gt;
+          &lt;td class=&quot;text-center&quot;&gt;2&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;td class=&quot;text-left&quot;&gt;New Zealander&lt;/td&gt;
+          &lt;td class=&quot;text-center&quot;&gt;1&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;td class=&quot;text-left&quot;&gt;Swedish&lt;/td&gt;
+          &lt;td class=&quot;text-center&quot;&gt;1&lt;/td&gt;
+        &lt;/tr&gt;
+      &lt;/tbody&gt;
+    &lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;In diesem Beitrag wird die Erstellung eines Barcharts zu einem Datenset aus der &lt;em&gt;experimental Motor Racing Developer API&lt;/em&gt; von &lt;a href=&quot;http://ergast.com/mrd/&quot;&gt;ergast.com&lt;/a&gt; erläutert. Die Visualisierung wurde innerhalb eines Node.js Projektes mit Ecmascript 6 und Hilfe der der Javascript Bibliothek D3 erstellt. (Der generierte SVG-Code wurde in diesen Artikel kopiert) &lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;more&quot;&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;h4 id=&quot;data-driven-documents&quot;&gt;Data-Driven Documents&lt;/h4&gt;
+&lt;p&gt;“D3 allows you to bind arbitrary data to a Document Object Model (DOM), and then apply data-driven transformations to the document.”&lt;sup&gt;&lt;a href=&quot;#3&quot;&gt;3&lt;/a&gt;&lt;/sup&gt; Dieser Satz fasst die Grundfunktionalität der Open-Source-Bibliothek D3 zusammen, deren drei D’s dementsprechend für “Data-Dricen Documents” stehen. Seit 2011 wird sie von Mike Bostock auf &lt;a href=&quot;https://github.com/mbostock/d3&quot;&gt;Github&lt;/a&gt; veröffentlicht und kontinuierlich erweitert.&lt;sup&gt;&lt;a href=&quot;#1&quot;&gt;1&lt;/a&gt;&lt;/sup&gt; Mit der Datenvisualisierungsbibliothek können DOM-Elemente auf der Grundlage von Datensätzen manipuliert und animiert werden und auch interaktive Funktionen lassen sich realisieren.
+Die Library nutzt die aktuellen Webstandards CSS3, HTML5 und SVG und bietet maximale Flexibilität beim Erstellen von Visualisierungen. Die hohe Performance in der Verarbeitung großer Datenmengen und die Kompatibilität zu unterschiedlichsten Dateiformaten&lt;sup&gt;&lt;a href=&quot;#4&quot;&gt;4&lt;/a&gt;&lt;/sup&gt;  zählen zu den großen Pluspunkten der Bibliothek.&lt;sup&gt;&lt;a href=&quot;#1&quot;&gt;1&lt;/a&gt;&lt;/sup&gt; Der funktionale Aufbau erleichtert das Erstellen von Plugins, die wiederverwendt werden können. Eine Liste von freien Plugins stellt Mike Bostock ebenfalls auf &lt;a href=&quot;https://github.com/mbostock/d3/wiki/Plugins&quot;&gt;GitHub&lt;/a&gt; zur Verfügung.
+D3 bietet neben den klassischen Visualisierungsarten wie Balken- oder Kuchendiagrammen die Möglichkeit auch komplexere Darstellungen wie Streamgraphen&lt;sup&gt;&lt;a href=&quot;#5&quot;&gt;5&lt;/a&gt;&lt;/sup&gt;, Chords&lt;sup&gt;&lt;a href=&quot;#6&quot;&gt;6&lt;/a&gt;&lt;/sup&gt; und Choropleths&lt;sup&gt;&lt;a href=&quot;#7&quot;&gt;7&lt;/a&gt;&lt;/sup&gt; oder eigene kreative Lösungen zu realisieren. &lt;/p&gt;
+&lt;h4 id=&quot;-hnlichkeit-zu-jquery&quot;&gt;Ähnlichkeit zu jQuery&lt;/h4&gt;
+&lt;p&gt;Neben Funktionen zur Verarbeitung von Daten stellt D3 wie schon erwähnt Funktionen zur Manipulation von DOM-Elementen und zur Erstellung von Animationen bereit. Frontendentwicklern, die bereits Erfahrung mit der Javascript-Library jQuery haben, kommt diese Ähnlichkeit zu Gute. Nicht nur die Begrifflichkeiten&lt;sup&gt;&lt;a href=&quot;#8&quot;&gt;8&lt;/a&gt;&lt;/sup&gt; und Funktionen zur DOM-Manipulation sind ableitbar, sondern auch Chaining, also die Verkettung von Funktionsaufrufen, funktioniert bei D3 analog. Auch die bereits angesprochene Erweiterbarkeit durch Plugins, ist von jQuery bekannt. &lt;sup&gt;&lt;a href=&quot;#3&quot;&gt;3&lt;/a&gt;&lt;/sup&gt;
+Dennoch ist “der Zeitaufwand für die Einarbeitung […] nicht zu unterschätzen”&lt;sup&gt;&lt;a href=&quot;#1&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;, da D3 ein mächtiges Werkzeug ist, dessen Potenzial bis zu dynamischen Echtzeit Visualisierungen reicht. Eine Dokumentation der Funktionen findet sich in der &lt;a href=&quot;https://github.com/mbostock/d3/wiki/API-Reference&quot;&gt;API-Referenz von D3&lt;/a&gt; . &lt;/p&gt;
+&lt;h4 id=&quot;styling&quot;&gt;Styling&lt;/h4&gt;
+&lt;p&gt;Anderst als pixelbasierte Grafiken sind SVGs als Skalierbare Vektor Grafken mit CSS stylebar. 
+Properties wie &lt;em&gt;shape-rendering&lt;/em&gt; für SVG-Elemente sind teilweise recht spezifisch und müssen anfangs gegebenenfalls beim &lt;a href=&quot;https://www.w3.org/TR/SVG/styling.html&quot;&gt;W3C&lt;/a&gt; nachgeschlagen werden. &lt;sup&gt;&lt;a href=&quot;#2&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;h4 id=&quot;anzahl-der-fahrer-pro-nation&quot;&gt;Anzahl der Fahrer pro Nation&lt;/h4&gt;
+&lt;p&gt;Im Markup Template wird ein Div-Container bereitgestellt, in den der SVG-Code gerendert wird.
+Die ID des Containers wird zusammen mit den darzustellenden Daten&lt;sup&gt;&lt;a href=&quot;#9&quot;&gt;9&lt;/a&gt;&lt;/sup&gt; an das D3-Skript übergeben. In diesem werden vor der Generierung des Balkendiagramms die Dimensionen der Visualisierung und ihre Randabstände bestimmt. Für die Darstellung der Achsenlabels wird nach links und nach unten mehr Platz benötigt und in &lt;em&gt;leftPadding&lt;/em&gt; und &lt;em&gt;bottomPadding&lt;/em&gt; berücksichtigt. Zusätzlich wird mit Hilfe des npm-Packages &lt;em&gt;uuid&lt;/em&gt; ein Universal Unique Identifier generiert, der als Selektor dem SVG-Element zugeordnet werden soll. In einer verteilten Anwendung mit vielen ggf. dynamischen SVG-Visualisierungen würde eine solche global eindeutige ID die Zuordnung erleichterten und dabei helfen Konflikte (z.B. das Überschreiben/Aktualisieren eines falschen SVGs) zu vermeiden.&lt;br&gt;Einem vordefinierten SVG-Template&lt;sup&gt;&lt;a href=&quot;#10&quot;&gt;10&lt;/a&gt;&lt;/sup&gt; wird anschließend die bereits definierte Viewbox zugewiesen und die uuid zugewisen und dieses SVG-Element dem DOM (innerhalb des vorgesehenen Div-Contaienrs) hinzugefügt. Nun wird die Funktion aufgerufen, die die eigentliche Visualisierung zeichnet. Ihr werden sowohl die erzeugte uuid (id des SVG-Elements), die darzustellenden Daten, die festgelegte Breite und Höhe des SVGs (jeweils abzüglich der Randabstände) und die Randabstände als Parameter übergeben.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;lang-javascript&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;default&lt;/span&gt; &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;containerId, data&lt;/span&gt;) &lt;/span&gt;{
+    &lt;span class=&quot;keyword&quot;&gt;const&lt;/span&gt; container = &lt;span class=&quot;built_in&quot;&gt;document&lt;/span&gt;.getElementById(containerId)
+    &lt;span class=&quot;keyword&quot;&gt;const&lt;/span&gt; width = &lt;span class=&quot;number&quot;&gt;800&lt;/span&gt;
+    &lt;span class=&quot;keyword&quot;&gt;const&lt;/span&gt; height = &lt;span class=&quot;number&quot;&gt;600&lt;/span&gt;
+    &lt;span class=&quot;keyword&quot;&gt;const&lt;/span&gt; margin = {
+        top: &lt;span class=&quot;number&quot;&gt;5&lt;/span&gt;,
+        right: &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;,
+        left: &lt;span class=&quot;number&quot;&gt;55&lt;/span&gt;,
+        bottom: &lt;span class=&quot;number&quot;&gt;145&lt;/span&gt;
+    }
+
+    &lt;span class=&quot;keyword&quot;&gt;const&lt;/span&gt; viewBox = &lt;span class=&quot;string&quot;&gt;`0 0 &lt;span class=&quot;subst&quot;&gt;${width}&lt;/span&gt; &lt;span class=&quot;subst&quot;&gt;${height}&lt;/span&gt;`&lt;/span&gt;
+    &lt;span class=&quot;keyword&quot;&gt;const&lt;/span&gt; w = width - margin.left - margin.right
+    &lt;span class=&quot;keyword&quot;&gt;const&lt;/span&gt; h = height - margin.top - margin.bottom
+
+    &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; (!(data &lt;span class=&quot;keyword&quot;&gt;instanceof&lt;/span&gt; &lt;span class=&quot;built_in&quot;&gt;Array&lt;/span&gt;)) {
+        &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt;
+    }
+
+    &lt;span class=&quot;keyword&quot;&gt;const&lt;/span&gt; id = &lt;span class=&quot;string&quot;&gt;'chart-'&lt;/span&gt; + uuid.v4()
+    &lt;span class=&quot;keyword&quot;&gt;const&lt;/span&gt; svg = tpl({
+        id,
+        viewBox
+    })
+
+    container.innerHTML = svg
+
+    draw(id, data, w, h, margin)
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Die &lt;em&gt;draw&lt;/em&gt; Funktion zeichnet zuerst das Kooradinatensystem, in welchem die Balken später dargestellt werden und verteilt die Werte aus dem übergebenem Datenarray an dessen Achsen. 
+Die Skala der x-Achse wird von D3 mit der Funktion &lt;em&gt;ordinal()&lt;/em&gt; bereitgestellt und die &lt;em&gt;rangeRoundBands()&lt;/em&gt; Methode berechnet eine gleichmäßige, horizontale Verteilung der einzelnen Balken über die der &lt;em&gt;draw&lt;/em&gt; Funktion übergebenen Breite des SVGs. Mit der D3-Methode &lt;em&gt;domain()&lt;/em&gt;  können jetzt die zur verarbeitenden Werte, auf die X-Achse gemappt werden. Da insgesamt zehn verschiedene Nationen in den Fahrerdaten vertreten waren, werden zehn Marken entlang der X-Achse gesetzt auf denen die Balken des Diagramms wachsen.          &lt;/p&gt;
+&lt;p&gt;Zur linearen Skalierung der y-Achse wird die Funktion &lt;em&gt;linear()&lt;/em&gt; genutzt. Der Bereich für die Darstellung der Achse wird mit der übergebenen Höhe definiert. Zu beachten ist, dass D3 immer von y = 0 ausgeht und der Bereich daher genau anderst herum angegeben werden&lt;sup&gt;&lt;a href=&quot;#11&quot;&gt;11&lt;/a&gt;&lt;/sup&gt;. Ebenfalls mit &lt;em&gt;domain()&lt;/em&gt; werden die im Datenarray übergebenen Werte zur Fahreranzahl innerhalb einer Nation als Skala für die Y-Achse verwendet. Der Bereich wird von 0 bis zum maximalen Wert im Datenset festgelegt.  &lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;lang-javascript&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;draw&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;chartId, data, width, height, margin&lt;/span&gt;) &lt;/span&gt;{
+    &lt;span class=&quot;keyword&quot;&gt;const&lt;/span&gt; svg = d3.select(&lt;span class=&quot;string&quot;&gt;`#&lt;span class=&quot;subst&quot;&gt;${chartId}&lt;/span&gt;`&lt;/span&gt;)
+    &lt;span class=&quot;keyword&quot;&gt;const&lt;/span&gt; x = d3.scale.ordinal().rangeRoundBands([&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;, width], &lt;span class=&quot;number&quot;&gt;0.1&lt;/span&gt;)
+    &lt;span class=&quot;keyword&quot;&gt;const&lt;/span&gt; y = d3.scale.linear().range([height, &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;])
+    &lt;span class=&quot;keyword&quot;&gt;const&lt;/span&gt; xAxis = d3.svg.axis()
+        .scale(x)
+        .orient(&lt;span class=&quot;string&quot;&gt;'bottom'&lt;/span&gt;)
+        .ticks(&lt;span class=&quot;number&quot;&gt;10&lt;/span&gt;)
+    &lt;span class=&quot;keyword&quot;&gt;const&lt;/span&gt; yAxis = d3.svg.axis()
+        .scale(y)
+        .orient(&lt;span class=&quot;string&quot;&gt;'left'&lt;/span&gt;)
+        .ticks(&lt;span class=&quot;number&quot;&gt;10&lt;/span&gt;)
+
+    x.domain(data.map(&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;d&lt;/span&gt;) &lt;/span&gt;{
+        &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; d.nationality
+    }))
+    y.domain([
+        &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;, d3.max(data, &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;d&lt;/span&gt;) &lt;/span&gt;{
+            &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; d.count
+        })
+    ])
+
+  ...
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Der zweite Teil der &lt;em&gt;draw&lt;/em&gt; Funktion fügt dem SVG-Element unter Verwendung der übergebenen Daten und der im ersten Teil erzeugten Konstanten alle benötigten Elemente zur Darstellung des Balkendiagramms hinzu. Für die Achsen werden zunächst g-Elementesup&amp;gt;&lt;a href=&quot;#12&quot;&gt;12&lt;/a&gt;&lt;/sup&gt; erzeugt. Diesen werden zwei Attribute, ein Klassenname für eventuelles Styling und ein transform-Attribut für die Positionierung der Achse innerhalb des Diagramms vergeben. Anschließend werden mit der Methode &lt;em&gt;call()&lt;/em&gt; die im ersten Teil des Skripts in einer Konstanten gespeicherten Funktionen auf die jeweilige Achse angewendet.&lt;/p&gt;
+&lt;p&gt;Als nächstets wird noch die Beschriftung der Achsen als SVG-Text mit Hilfe von &lt;em&gt;append(“text”)&lt;/em&gt;  vorgenommen. Dem Text Element können auch verschiedene Attribute, z.B. für &lt;em&gt;transform&lt;/em&gt; für die Rotation eines Textes, &lt;em&gt;x&lt;/em&gt; und &lt;em&gt;y&lt;/em&gt; für die absolute Positionierung und &lt;em&gt;dx&lt;/em&gt; und &lt;em&gt;dy&lt;/em&gt; für Offsetwerte zur Textplatzierung relativ zu den absoulten Werten. &lt;/p&gt;
+&lt;p&gt;Zuletzt wird die eigentliche Visualisierung der Daten implementiert. Dabei wird innerhalb des SVG-Elements mit &lt;em&gt;selectAll()&lt;/em&gt; eine Auswahl an DOM-Elementen getroffen, an welche die zu visualisierenden Daten gebunden werden sollen. Obwohl zu diesem Zeitpunkt noch keine DOM-Elemente mit der Klasse &lt;em&gt;bar&lt;/em&gt; existieren, werden diese als Selektion ausgewählt. Die &lt;em&gt;selectAll()&lt;/em&gt; Methode liefert also eine leere Auswahl zurück, die also vorerst nur die späteren Elemente mit der Klasse &lt;em&gt;bar&lt;/em&gt; vertritt. Die &lt;em&gt;data()&lt;/em&gt; Methode bindet nun das übergebene Datenarray an die Selektion. D.h. die enthaltenen Datensätze werden gezählt, ihre Werte geparst und alle nachfolgenden Funktionen so oft ausgeführt wie Datensätze existieren. Um nun neue, an diese Datensätze gebundene Elemente zu erzeugen, wird die D3-Funktion &lt;em&gt;enter()&lt;/em&gt; verwendet. Sie untersucht das DOM und die Anzahl der vorhandenen Datenwerte. Sind weniger DOM-Elemente vorhanden als Daten, erstellt sie ein neues Element als Platzhalter, auf welchem die nachfolgenden Funktionen ausgeführt werden können. &lt;sup&gt;&lt;a href=&quot;#13&quot;&gt;13&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;p&gt;Dank D3s &lt;em&gt;enter()&lt;/em&gt; Methode wird mit &lt;em&gt;append(‘rect’)&lt;/em&gt; für jede der zehn Nationen im Datenarray ein Balken in Form eines einfachen SVG Rechteck-Shapes erstellt. Diese erhalten jeweils ein Klassenattribut mit dem Wert &lt;em&gt;bar&lt;/em&gt; (bei einer dynamischen Visualisierung würde &lt;em&gt;selectAll(‘bar’)&lt;/em&gt; bei erneutem Aufruf von &lt;em&gt;draw&lt;/em&gt; die bereits gerenderten Balken als Selektion auswählen), die Attribute &lt;em&gt;x&lt;/em&gt; und &lt;em&gt;y&lt;/em&gt; für die Positionierung im Koordinatensystem und die Attribute &lt;em&gt;width&lt;/em&gt; und &lt;em&gt;height&lt;/em&gt;. Der X-Wert eines Balkens wird anhand der vorher festgelegten X-Achse festgelegt, ebenso der Y-Wert, er entpricht der Anzahl an Fahrern. Die Höhe eines Balken errechnet sich aus der Höhe des SVGs abzüglich des Abstands zum Datenwert für die Fahreranzahl auf der Y-Achse. Die Breite wird von der D3-Methode &lt;em&gt;rangeBand()&lt;/em&gt; automatisch entsprechend des verfügbaeren Platzes berechnet.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;lang-javascript&quot;&gt;...
+
+svg
+        .append(&lt;span class=&quot;string&quot;&gt;'g'&lt;/span&gt;)
+        .attr(&lt;span class=&quot;string&quot;&gt;'class'&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;'x axis'&lt;/span&gt;)
+        .attr(&lt;span class=&quot;string&quot;&gt;'transform'&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;`translate(&lt;span class=&quot;subst&quot;&gt;${margin.left}&lt;/span&gt;, &lt;span class=&quot;subst&quot;&gt;${height}&lt;/span&gt;)`&lt;/span&gt;)
+        .call(xAxis)
+        .selectAll(&lt;span class=&quot;string&quot;&gt;'text'&lt;/span&gt;)
+        .style(&lt;span class=&quot;string&quot;&gt;'text-anchor'&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;'end'&lt;/span&gt;)
+        .attr(&lt;span class=&quot;string&quot;&gt;'dx'&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;'-.5em'&lt;/span&gt;)
+        .attr(&lt;span class=&quot;string&quot;&gt;'dy'&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;'.5em'&lt;/span&gt;)
+        .attr(&lt;span class=&quot;string&quot;&gt;'transform'&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;'rotate(-45)'&lt;/span&gt;)
+
+    svg
+        .append(&lt;span class=&quot;string&quot;&gt;'g'&lt;/span&gt;)
+        .attr(&lt;span class=&quot;string&quot;&gt;'class'&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;'y axis'&lt;/span&gt;)
+        .attr(&lt;span class=&quot;string&quot;&gt;'transform'&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;`translate(&lt;span class=&quot;subst&quot;&gt;${margin.left}&lt;/span&gt;, 0)`&lt;/span&gt;)
+        .call(yAxis)
+        .append(&lt;span class=&quot;string&quot;&gt;'text'&lt;/span&gt;)
+        .attr(&lt;span class=&quot;string&quot;&gt;'transform'&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;'rotate(-90)'&lt;/span&gt;)
+        .attr(&lt;span class=&quot;string&quot;&gt;'y'&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;6&lt;/span&gt;)
+        .attr(&lt;span class=&quot;string&quot;&gt;'dy'&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;'0.71em'&lt;/span&gt;)
+        .style(&lt;span class=&quot;string&quot;&gt;'text-anchor'&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;'end'&lt;/span&gt;)
+        .text(&lt;span class=&quot;string&quot;&gt;'Count'&lt;/span&gt;)
+
+    svg
+        .selectAll(&lt;span class=&quot;string&quot;&gt;'bar'&lt;/span&gt;)
+        .data(data)
+        .enter()
+        .append(&lt;span class=&quot;string&quot;&gt;'rect'&lt;/span&gt;)
+        .attr(&lt;span class=&quot;string&quot;&gt;'class'&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;'bar'&lt;/span&gt;)
+        &lt;span class=&quot;comment&quot;&gt;/* Animation im Originalprojekt
+        .attr(&quot;y&quot;, height) //set y-axis at the bottom for the transition
+        .attr(&quot;height&quot;, 0) //set height of bars to 0 for the transition    
+        .transition()
+        .delay(100)
+        .duration(1000)
+        */&lt;/span&gt;
+        .attr(&lt;span class=&quot;string&quot;&gt;'height'&lt;/span&gt;, &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;d&lt;/span&gt;) &lt;/span&gt;{
+            &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; height - y(d.count)
+        })
+        .attr(&lt;span class=&quot;string&quot;&gt;'y'&lt;/span&gt;, &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;d&lt;/span&gt;) &lt;/span&gt;{
+            &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; y(d.count)
+        })
+        .attr(&lt;span class=&quot;string&quot;&gt;'x'&lt;/span&gt;, &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;d&lt;/span&gt;) &lt;/span&gt;{
+            &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; x(d.nationality) + margin.left
+        })
+        .attr(&lt;span class=&quot;string&quot;&gt;'width'&lt;/span&gt;, &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;&lt;/span&gt;) &lt;/span&gt;{
+            &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; x.rangeBand()
+        })
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Im Originalprojekt wurde der Visualisierung mit einer in D3 sehr einfach zu erstellenden Transition noch etwas Dynamik verliehen werden. Die Säulen wurden mit der Funktion &lt;em&gt;transition()&lt;/em&gt; von der X-Achse aus zeitversetzt zu ihrem jeweiligen maximalen Höhenwert animiert. Dazu wurde vor dem Aufruf der Transition die Y-Achse auf den Wert der SVG-Höhe verschoben, da ihr Wertebereich umgekehrt ist. Zusätzlich wurde die Höhe der Balken vor der Animation auf null gesetzt. Die Funktion &lt;em&gt;delay()&lt;/em&gt; ist für die Verzögerung der Animation zuständig, &lt;em&gt;duration()&lt;/em&gt; bestimmt die Dauer in Millisekunden. &lt;sup&gt;&lt;a href=&quot;#1&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;div class='footnotes'&gt;
+
+&lt;a id='1'&gt;1&lt;/a&gt; vgl. &lt;a href=&quot;http://t3n.de/magazin/javascript-bibliothek-d3-237224/&quot;&gt;http://t3n.de/magazin/javascript-bibliothek-d3-237224/&lt;/a&gt;&lt;br&gt;&lt;a id='2'&gt;2&lt;/a&gt; vgl. &lt;a href=&quot;https://www.linkedin.com/pulse/data-visualizations-using-d3js-brant-snow?trk=seokp_posts_primary_cluster_res_title&quot;&gt;https://www.linkedin.com/pulse/data-visualizations-using-d3js-brant-snow?trk=seokp_posts_primary_cluster_res_title&lt;/a&gt;&lt;br&gt;&lt;a id='3'&gt;3&lt;/a&gt;  vgl. &lt;a href=&quot;http://d3js.org/&quot;&gt;http://d3js.org/&lt;/a&gt;&lt;br&gt;&lt;a id='4'&gt;4&lt;/a&gt;  TEXT, JSON, XML, HTML, CSV, TSV&lt;br&gt;&lt;a id='5'&gt;5&lt;/a&gt; “A streamgraph […] is a type of stacked area graph which is displaced around a central axis, resulting in a flowing, organic shape.” (vgl. &lt;a href=&quot;https://en.wikipedia.org/wiki/Streamgraph&quot;&gt;https://en.wikipedia.org/wiki/Streamgraph&lt;/a&gt;)&lt;br&gt;&lt;a id='6'&gt;6&lt;/a&gt; “A chord diagram is a graphical method of displaying the inter-relationships between data in a matrix. The data is arranged radially around a circle with the relationships between the points typically drawn as arcs connecting the data together.” (vgl. &lt;a href=&quot;https://en.wikipedia.org/wiki/Chord_diagram&quot;&gt;https://en.wikipedia.org/wiki/Chord_diagram&lt;/a&gt;)&lt;br&gt;&lt;a id='7'&gt;7&lt;/a&gt;  “A choropleth map […] is a thematic map in which areas are shaded or patterned in proportion to the measurement of the statistical variable being displayed on the map, such as population density or per-capita income.” (vgl. &lt;a href=&quot;https://en.wikipedia.org/wiki/Choropleth_map&quot;&gt;https://en.wikipedia.org/wiki/Choropleth_map&lt;/a&gt;)&lt;br&gt;&lt;a id='8'&gt;8&lt;/a&gt;Genau wie in jQuery werden DOM-Elemente bei D3 anhand von CSS-Selektoren ausgewählt, allerdings werden diese im Umgang mit der Bilbliothek als “selections” bezeichnet. (vgl. &lt;a href=&quot;https://www.linkedin.com/pulse/data-visualizations-using-d3js-brant-snow?trk=seokp_posts_primary_cluster_res_title&quot;&gt;https://www.linkedin.com/pulse/data-visualizations-using-d3js-brant-snow?trk=seokp_posts_primary_cluster_res_title&lt;/a&gt;)&lt;br&gt;&lt;a id='9'&gt;9&lt;/a&gt; Für das Beispiel wurden die &lt;a href=&quot;http://ergast.com/api/f1/drivers.json&quot;&gt;Fahrerdaten&lt;/a&gt; der &lt;em&gt;experimental Motor Racing Developer API&lt;/em&gt; verwendet. Aus ihnen wurde ein Array mit Objekten, die zum einen die Nationalität und zum anderen, die Häufigkeit dieser Nationalität enthalten, an das D3-Skript übergeben. Das Barchart stellt später die Anzahl der Fahrer pro Nation dar.&lt;br&gt;&lt;a id='10'&gt;10&lt;/a&gt; Am Anfang des D3-Skripts wurde dieses Template importiert: &lt;code&gt;js import tpl from &amp;#39;../templates/filename.hbs&amp;#39;&lt;/code&gt;&lt;br&gt;&lt;a id='11'&gt;11&lt;/a&gt; Statt mit [0, height] wird also [height, 0] als Range definiert. (vgl. &lt;a href=&quot;https://www.linkedin.com/pulse/data-visualizations-using-d3js-brant-snow?trk=seokp_posts_primary_cluster_res_title&quot;&gt;https://www.linkedin.com/pulse/data-visualizations-using-d3js-brant-snow?trk=seokp_posts_primary_cluster_res_title&lt;/a&gt;)&lt;br&gt;&lt;a id='12'&gt;12&lt;/a&gt; “It is a methodology in svg to group shapes together.”
+&lt;a id='13'&gt;13&lt;/a&gt; vgl. &lt;a href=&quot;http://alignedleft.com/tutorials/d3/binding-data&quot;&gt;http://alignedleft.com/tutorials/d3/binding-data&lt;/a&gt;
+&lt;/div&gt;  
+</description>
+    </item>
+    <item>
       <title>Typo3</title>
       <link>http://localhost:8080/articles/typo3/</link>
-      <pubDate>Fri, 15 Jan 2016 01:00:00 +0100</pubDate>
+      <pubDate>Tue, 05 Jan 2016 01:00:00 +0100</pubDate>
       <guid isPermaLink="true">http://localhost:8080/articles/typo3/</guid>
       <author></author>
-      <description>&lt;p&gt;Typo3&lt;/p&gt;
+      <description>&lt;p&gt;&lt;img src='https://upload.wikimedia.org/wikipedia/commons/5/58/Logo_TYPO3.svg' height='275px' /&gt;&lt;/p&gt;
+&lt;p&gt;Ein kurzer Überblick über das Content-Management-System Typo3.&lt;/p&gt;
 &lt;p&gt;&lt;span class=&quot;more&quot;&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;Gründe für Frameworks: Sicherheitsaspekte, sauberer Request/Response Flow (MVC-Pattern), Wiederverwendbarkeit, Organisation, Bundles (Libraries), –&amp;gt; Produktivität&lt;/p&gt;
 &lt;p&gt;“Build your App, not your Tools”&lt;/p&gt;
@@ -143,105 +341,6 @@ sendet Response &lt;/p&gt;
 &lt;li&gt;schlechtes Datenbank design&lt;/li&gt;
 &lt;li&gt;symfony console crippled (Eigenentwicklung)&lt;/li&gt;
 &lt;/ul&gt;
-</description>
-    </item>
-    <item>
-      <title>D3 Data-Driven Documents</title>
-      <link>http://localhost:8080/articles/d3/</link>
-      <pubDate>Mon, 11 Jan 2016 01:00:00 +0100</pubDate>
-      <guid isPermaLink="true">http://localhost:8080/articles/d3/</guid>
-      <author></author>
-      <description>&lt;div class=&quot;row&quot;&gt;
-  &lt;div class=&quot;col-sm-6&quot; id=&quot;task01&quot;&gt;&lt;svg viewBox=&quot;0 0 800 600&quot; id=&quot;chart-aad68792-9265-4db3-af5c-cd526f0f3673&quot;&gt;
-  &lt;g transform=&quot;&quot;/&gt;
-&lt;g class=&quot;x axis&quot; transform=&quot;translate(55, 450)&quot;&gt;&lt;g class=&quot;tick&quot; style=&quot;opacity: 1;&quot; transform=&quot;translate(44,0)&quot;&gt;&lt;line y2=&quot;6&quot; x2=&quot;0&quot;/&gt;&lt;text dy=&quot;.5em&quot; style=&quot;text-anchor: end;&quot; y=&quot;9&quot; x=&quot;0&quot; dx=&quot;-.5em&quot; transform=&quot;rotate(-45)&quot;&gt;Italian&lt;/text&gt;&lt;/g&gt;&lt;g class=&quot;tick&quot; style=&quot;opacity: 1;&quot; transform=&quot;translate(117,0)&quot;&gt;&lt;line y2=&quot;6&quot; x2=&quot;0&quot;/&gt;&lt;text dy=&quot;.5em&quot; style=&quot;text-anchor: end;&quot; y=&quot;9&quot; x=&quot;0&quot; dx=&quot;-.5em&quot; transform=&quot;rotate(-45)&quot;&gt;British&lt;/text&gt;&lt;/g&gt;&lt;g class=&quot;tick&quot; style=&quot;opacity: 1;&quot; transform=&quot;translate(190,0)&quot;&gt;&lt;line y2=&quot;6&quot; x2=&quot;0&quot;/&gt;&lt;text dy=&quot;.5em&quot; style=&quot;text-anchor: end;&quot; y=&quot;9&quot; x=&quot;0&quot; dx=&quot;-.5em&quot; transform=&quot;rotate(-45)&quot;&gt;Belgian&lt;/text&gt;&lt;/g&gt;&lt;g class=&quot;tick&quot; style=&quot;opacity: 1;&quot; transform=&quot;translate(263,0)&quot;&gt;&lt;line y2=&quot;6&quot; x2=&quot;0&quot;/&gt;&lt;text dy=&quot;.5em&quot; style=&quot;text-anchor: end;&quot; y=&quot;9&quot; x=&quot;0&quot; dx=&quot;-.5em&quot; transform=&quot;rotate(-45)&quot;&gt;American&lt;/text&gt;&lt;/g&gt;&lt;g class=&quot;tick&quot; style=&quot;opacity: 1;&quot; transform=&quot;translate(336,0)&quot;&gt;&lt;line y2=&quot;6&quot; x2=&quot;0&quot;/&gt;&lt;text dy=&quot;.5em&quot; style=&quot;text-anchor: end;&quot; y=&quot;9&quot; x=&quot;0&quot; dx=&quot;-.5em&quot; transform=&quot;rotate(-45)&quot;&gt;German&lt;/text&gt;&lt;/g&gt;&lt;g class=&quot;tick&quot; style=&quot;opacity: 1;&quot; transform=&quot;translate(409,0)&quot;&gt;&lt;line y2=&quot;6&quot; x2=&quot;0&quot;/&gt;&lt;text dy=&quot;.5em&quot; style=&quot;text-anchor: end;&quot; y=&quot;9&quot; x=&quot;0&quot; dx=&quot;-.5em&quot; transform=&quot;rotate(-45)&quot;&gt;Dutch&lt;/text&gt;&lt;/g&gt;&lt;g class=&quot;tick&quot; style=&quot;opacity: 1;&quot; transform=&quot;translate(482,0)&quot;&gt;&lt;line y2=&quot;6&quot; x2=&quot;0&quot;/&gt;&lt;text dy=&quot;.5em&quot; style=&quot;text-anchor: end;&quot; y=&quot;9&quot; x=&quot;0&quot; dx=&quot;-.5em&quot; transform=&quot;rotate(-45)&quot;&gt;French&lt;/text&gt;&lt;/g&gt;&lt;g class=&quot;tick&quot; style=&quot;opacity: 1;&quot; transform=&quot;translate(555,0)&quot;&gt;&lt;line y2=&quot;6&quot; x2=&quot;0&quot;/&gt;&lt;text dy=&quot;.5em&quot; style=&quot;text-anchor: end;&quot; y=&quot;9&quot; x=&quot;0&quot; dx=&quot;-.5em&quot; transform=&quot;rotate(-45)&quot;&gt;Spanish&lt;/text&gt;&lt;/g&gt;&lt;g class=&quot;tick&quot; style=&quot;opacity: 1;&quot; transform=&quot;translate(628,0)&quot;&gt;&lt;line y2=&quot;6&quot; x2=&quot;0&quot;/&gt;&lt;text dy=&quot;.5em&quot; style=&quot;text-anchor: end;&quot; y=&quot;9&quot; x=&quot;0&quot; dx=&quot;-.5em&quot; transform=&quot;rotate(-45)&quot;&gt;New Zealander&lt;/text&gt;&lt;/g&gt;&lt;g class=&quot;tick&quot; style=&quot;opacity: 1;&quot; transform=&quot;translate(701,0)&quot;&gt;&lt;line y2=&quot;6&quot; x2=&quot;0&quot;/&gt;&lt;text dy=&quot;.5em&quot; style=&quot;text-anchor: end;&quot; y=&quot;9&quot; x=&quot;0&quot; dx=&quot;-.5em&quot; transform=&quot;rotate(-45)&quot;&gt;Swedish&lt;/text&gt;&lt;/g&gt;&lt;path class=&quot;domain&quot; d=&quot;M-4,6V0H745V4&quot;/&gt;&lt;/g&gt;&lt;g class=&quot;y axis&quot; transform=&quot;translate(55, 0)&quot;&gt;&lt;g class=&quot;tick&quot; style=&quot;opacity: 1;&quot; transform=&quot;translate(0,450)&quot;&gt;&lt;line x2=&quot;-6&quot; y2=&quot;0&quot;/&gt;&lt;text dy=&quot;.32em&quot; style=&quot;text-anchor: end;&quot; x=&quot;-9&quot; y=&quot;0&quot;&gt;0&lt;/text&gt;&lt;/g&gt;&lt;g class=&quot;tick&quot; style=&quot;opacity: 1;&quot; transform=&quot;translate(0,400)&quot;&gt;&lt;line x2=&quot;-6&quot; y2=&quot;0&quot;/&gt;&lt;text dy=&quot;.32em&quot; style=&quot;text-anchor: end;&quot; x=&quot;-9&quot; y=&quot;0&quot;&gt;1&lt;/text&gt;&lt;/g&gt;&lt;g class=&quot;tick&quot; style=&quot;opacity: 1;&quot; transform=&quot;translate(0,350)&quot;&gt;&lt;line x2=&quot;-6&quot; y2=&quot;0&quot;/&gt;&lt;text dy=&quot;.32em&quot; style=&quot;text-anchor: end;&quot; x=&quot;-9&quot; y=&quot;0&quot;&gt;2&lt;/text&gt;&lt;/g&gt;&lt;g class=&quot;tick&quot; style=&quot;opacity: 1;&quot; transform=&quot;translate(0,300.00000000000006)&quot;&gt;&lt;line x2=&quot;-6&quot; y2=&quot;0&quot;/&gt;&lt;text dy=&quot;.32em&quot; style=&quot;text-anchor: end;&quot; x=&quot;-9&quot; y=&quot;0&quot;&gt;3&lt;/text&gt;&lt;/g&gt;&lt;g class=&quot;tick&quot; style=&quot;opacity: 1;&quot; transform=&quot;translate(0,250)&quot;&gt;&lt;line x2=&quot;-6&quot; y2=&quot;0&quot;/&gt;&lt;text dy=&quot;.32em&quot; style=&quot;text-anchor: end;&quot; x=&quot;-9&quot; y=&quot;0&quot;&gt;4&lt;/text&gt;&lt;/g&gt;&lt;g class=&quot;tick&quot; style=&quot;opacity: 1;&quot; transform=&quot;translate(0,200)&quot;&gt;&lt;line x2=&quot;-6&quot; y2=&quot;0&quot;/&gt;&lt;text dy=&quot;.32em&quot; style=&quot;text-anchor: end;&quot; x=&quot;-9&quot; y=&quot;0&quot;&gt;5&lt;/text&gt;&lt;/g&gt;&lt;g class=&quot;tick&quot; style=&quot;opacity: 1;&quot; transform=&quot;translate(0,150.00000000000003)&quot;&gt;&lt;line x2=&quot;-6&quot; y2=&quot;0&quot;/&gt;&lt;text dy=&quot;.32em&quot; style=&quot;text-anchor: end;&quot; x=&quot;-9&quot; y=&quot;0&quot;&gt;6&lt;/text&gt;&lt;/g&gt;&lt;g class=&quot;tick&quot; style=&quot;opacity: 1;&quot; transform=&quot;translate(0,100)&quot;&gt;&lt;line x2=&quot;-6&quot; y2=&quot;0&quot;/&gt;&lt;text dy=&quot;.32em&quot; style=&quot;text-anchor: end;&quot; x=&quot;-9&quot; y=&quot;0&quot;&gt;7&lt;/text&gt;&lt;/g&gt;&lt;g class=&quot;tick&quot; style=&quot;opacity: 1;&quot; transform=&quot;translate(0,50.00000000000002)&quot;&gt;&lt;line x2=&quot;-6&quot; y2=&quot;0&quot;/&gt;&lt;text dy=&quot;.32em&quot; style=&quot;text-anchor: end;&quot; x=&quot;-9&quot; y=&quot;0&quot;&gt;8&lt;/text&gt;&lt;/g&gt;&lt;g class=&quot;tick&quot; style=&quot;opacity: 1;&quot; transform=&quot;translate(0,8)&quot;&gt;&lt;line x2=&quot;-6&quot; y2=&quot;0&quot;/&gt;&lt;text dy=&quot;.32em&quot; style=&quot;text-anchor: end;&quot; x=&quot;-9&quot; y=&quot;0&quot;&gt;9&lt;/text&gt;&lt;/g&gt;&lt;path class=&quot;domain&quot; d=&quot;M-3,0H0V450H-4&quot;/&gt;&lt;text transform=&quot;rotate(-90)&quot; y=&quot;6&quot; dy=&quot;0.71em&quot; style=&quot;text-anchor: end;&quot;&gt;Count&lt;/text&gt;&lt;/g&gt;&lt;rect class=&quot;bar&quot; x=&quot;66&quot; width=&quot;66&quot; y=&quot;200&quot; height=&quot;250&quot;/&gt;&lt;rect class=&quot;bar&quot; x=&quot;139&quot; width=&quot;66&quot; y=&quot;200&quot; height=&quot;250&quot;/&gt;&lt;rect class=&quot;bar&quot; x=&quot;212&quot; width=&quot;66&quot; y=&quot;400&quot; height=&quot;50&quot;/&gt;&lt;rect class=&quot;bar&quot; x=&quot;285&quot; width=&quot;66&quot; y=&quot;0&quot; height=&quot;450&quot;/&gt;&lt;rect class=&quot;bar&quot; x=&quot;358&quot; width=&quot;66&quot; y=&quot;350&quot; height=&quot;100&quot;/&gt;&lt;rect class=&quot;bar&quot; x=&quot;431&quot; width=&quot;66&quot; y=&quot;400&quot; height=&quot;50&quot;/&gt;&lt;rect class=&quot;bar&quot; x=&quot;504&quot; width=&quot;66&quot; y=&quot;300.00000000000006&quot; height=&quot;149.99999999999994&quot;/&gt;&lt;rect class=&quot;bar&quot; x=&quot;577&quot; width=&quot;66&quot; y=&quot;350&quot; height=&quot;100&quot;/&gt;&lt;rect class=&quot;bar&quot; x=&quot;650&quot; width=&quot;66&quot; y=&quot;400&quot; height=&quot;50&quot;/&gt;&lt;rect class=&quot;bar&quot; x=&quot;723&quot; width=&quot;66&quot; y=&quot;400&quot; height=&quot;50&quot;/&gt;&lt;/svg&gt;
-    &lt;table class=&quot;table&quot;&gt;
-      &lt;thead&gt;
-      &lt;tr&gt;&lt;th class=&quot;text-left&quot;&gt;Nationality&lt;/th&gt;
-      &lt;th class=&quot;text-center&quot;&gt;Count&lt;/th&gt;&lt;br&gt;      &lt;/tr&gt;&lt;/thead&gt;
-      &lt;tbody&gt;
-        &lt;tr&gt;
-          &lt;td class=&quot;text-left&quot;&gt;Italian&lt;/td&gt;
-          &lt;td class=&quot;text-center&quot;&gt;5&lt;/td&gt;
-        &lt;/tr&gt;
-        &lt;tr&gt;
-          &lt;td class=&quot;text-left&quot;&gt;British&lt;/td&gt;
-          &lt;td class=&quot;text-center&quot;&gt;5&lt;/td&gt;
-        &lt;/tr&gt;
-        &lt;tr&gt;
-          &lt;td class=&quot;text-left&quot;&gt;Belgian&lt;/td&gt;
-          &lt;td class=&quot;text-center&quot;&gt;1&lt;/td&gt;
-        &lt;/tr&gt;
-        &lt;tr&gt;
-          &lt;td class=&quot;text-left&quot;&gt;American&lt;/td&gt;
-          &lt;td class=&quot;text-center&quot;&gt;9&lt;/td&gt;
-        &lt;/tr&gt;
-        &lt;tr&gt;
-          &lt;td class=&quot;text-left&quot;&gt;German&lt;/td&gt;
-          &lt;td class=&quot;text-center&quot;&gt;2&lt;/td&gt;
-        &lt;/tr&gt;
-        &lt;tr&gt;
-          &lt;td class=&quot;text-left&quot;&gt;Dutch&lt;/td&gt;
-          &lt;td class=&quot;text-center&quot;&gt;1&lt;/td&gt;
-        &lt;/tr&gt;
-        &lt;tr&gt;
-          &lt;td class=&quot;text-left&quot;&gt;French&lt;/td&gt;
-          &lt;td class=&quot;text-center&quot;&gt;3&lt;/td&gt;
-        &lt;/tr&gt;
-        &lt;tr&gt;
-          &lt;td class=&quot;text-left&quot;&gt;Spanish&lt;/td&gt;
-          &lt;td class=&quot;text-center&quot;&gt;2&lt;/td&gt;
-        &lt;/tr&gt;
-        &lt;tr&gt;
-          &lt;td class=&quot;text-left&quot;&gt;New Zealander&lt;/td&gt;
-          &lt;td class=&quot;text-center&quot;&gt;1&lt;/td&gt;
-        &lt;/tr&gt;
-        &lt;tr&gt;
-          &lt;td class=&quot;text-left&quot;&gt;Swedish&lt;/td&gt;
-          &lt;td class=&quot;text-center&quot;&gt;1&lt;/td&gt;
-        &lt;/tr&gt;
-      &lt;/tbody&gt;
-    &lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;p&gt;In diesem Beitrag wird die Erstellung eines Barcharts innerhalb eines Ecmascript 6 Projektes mit Hilfe der der Javascript Bibliothek D3 erläutert. &lt;/p&gt;
-&lt;p&gt;&lt;span class=&quot;more&quot;&gt;&lt;/span&gt;&lt;/p&gt;
-&lt;h4 id=&quot;data-driven-documents&quot;&gt;Data-Driven Documents&lt;/h4&gt;
-&lt;p&gt;D3 steht für „Data-Driven Documents“ und wird seit 2011 von Mike Bostock als Open-Source-Bibliothek für Datenvisualisierung auf &lt;a href=&quot;https://github.com/mbostock/d3&quot;&gt;Github&lt;/a&gt;  veröffentlicht, kontinuierlich erweitert und optimiert. Die Bibliothek erlaubt die Manipulation des DOM von HTML-Dokumenten auf der Grundlage von Datensätzen. Dafür nutzt sie die Möglichkeiten moderner Browser wie Chrome, Safari, Firefox, Opera oder IE9+ sowie der aktuellen Webstandards CSS3, HTML5 und SVG. maximale Flexibilität gelegt. Hohe Performance in der Verarbeitung großer Datenmengen und die Möglichkeit der dynamischen Manipulation von Animationen und Interaktionen sind weitere Features des Frameworks. D3 zeichnet sich unter anderem dadurch aus, dass es mit den unterschiedlichsten Dateiformaten umgehen kann. TEXT, JSON, XML, HTML, CSV oder TSV lassen sich – eine valide Datenstruktur vorausgesetzt – problemlos verarbeiten. Neben klassischen Diagrammarten wie Balken- oder Säulendiagrammen lassen sich mit D3 auch komplexere Arten wie Treemaps oder Akkorddiagramme realisieren. Zeitaufwand für die Einarbeitung ist nicht zu unterschätzen, mächtige Werkzeug, dynamic real time data visualizations &lt;sup&gt;&lt;a href=&quot;#1&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;
-“D3 allows you to bind arbitrary data to a Document Object Model (DOM), and then apply data-driven transformations to the document.”&lt;sup&gt;&lt;a href=&quot;#3&quot;&gt;3&lt;/a&gt;&lt;/sup&gt;
-D3 is extremely fast, supporting large datasets and dynamic behaviors for interaction and animation. D3’s functional style allows code reuse through a diverse collection of components and plugins.&lt;sup&gt;&lt;a href=&quot;#3&quot;&gt;3&lt;/a&gt;&lt;/sup&gt;
-the d3.geo.path function, for example, projects geographic coordinates into SVG path data. &lt;sup&gt;&lt;a href=&quot;#3&quot;&gt;3&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
-&lt;p&gt;Ähnlichkeit zu jQuery
-Dieses besteht neben dem Core aus den Komponenten Scales, SVG, Time, Layouts, Geography, Geometry und Behaviours. Im Kern verankert sind unter anderem Funktionen zur Auswahl von DOM-Elementen, zur Erstellung von Animationen, Verarbeitung von Daten und Manipulation von Farben. Die Bezeichnungen der anderen Komponenten deuten bereits auf ihre Funktionen hin. Eine detaillierte Erklärung findet sich in der &lt;a href=&quot;https://github.com/mbostock/d3/wiki/API-Reference&quot;&gt;API-Referenz von D3&lt;/a&gt; . Darüber hinaus kann man die Funktionalität wie bei jQuery über Plugins erweitern, sollten die integrierten Möglichkeiten einmal doch nicht ausreichen. Eine weitere Ähnlichkeit zu jQuery ist das praktische Chaining, also das Verketten von Funktionen.&lt;sup&gt;&lt;a href=&quot;#1&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;
-“If you have spent time as a front end developer, you know how tedious it can be to modify the W3C specified DOM.  JQuery’s popularity in recent years is many explained by its approach to simplify this methodology.  jQuery typical calls these “Selectors”.  In d3.js, they work similarly but are called … well “Selections”.” &lt;sup&gt;&lt;a href=&quot;#2&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
-&lt;p&gt;Styling
-SVG are Vector Graphics instead of Pixel based graphics and consequently some of the new CSS specifications help us to deal with them.  We are going to want crispEdges so we will include the new shape-rendering: crispEdges to accomplish this. &lt;sup&gt;&lt;a href=&quot;#2&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
-&lt;p&gt;Aufbau
-Neben der Einbindung von Stylesheets und Skripten empfiehlt es sich, einen DIV-Container bereitzustellen, in den später das Säulendiagramm gerendert wird. Der Container erhält die frei gewählte ID „bar-chart“ als eindeutigen Selektor 
-Code zur Generierung des Säulendiagramms: Zuerst werden die Dimensionen des Diagramms und dessen Randabstände bestimmt. In den Variablen „leftPadding“ und „bottomPadding“ legen wir einen größeren Abstand nach links und unten fest, der für die Darstellung der Achsenlabels notwendig ist.
-Skala für die x-Achse. Beim Säulendiagramm nutzt man dafür die Ordinalskala, die D3 mit der Funktion ordinal() bereitstellt. rangeRoundBands sorgt dann dafür, dass die Auswahl an zu verarbeitenden Werten in separate Säulen unterteilt wird. &lt;sup&gt;&lt;a href=&quot;#1&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;
- The rangeRoundBands method computes range values so as to divide the chart area into evenly-spaced, evenly-sized bands, as in a bar chart.&lt;sup&gt;&lt;a href=&quot;#2&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;
-leftPadding und width-padding legen den Bereich fest, in dem die Säulen aufgeteilt werden. Auch der Abstand zwischen den Säulen lässt sich einstellen.
-Zur linearen Skalierung der y-Achse nutzen wir die Funktion linear(). Der Bereich für die Darstellung der Achse wird mit height - bottomPadding sowie padding definiert. Zu beachten ist hierbei, den Bereich umgekehrt anzugeben, da D3.js immer von y=0 ausgeht.
-Definition der beiden Achsen erfolgt nun mit Hilfe des Funktionsaufrufs d3.svg.axis(). Der folgenden Funktion scale() wird mit den Variablen x oder y jeweils übergeben, welche Skalierung genutzt werden soll. Die Lage der Achsenbezeichnung bestimmt man mit Hilfe von orient().
-Bevor die JSON-Daten geladen werden können, muss nun noch das SVG-Element definiert und dem DIV-Container #bar-chart zugewiesen werden. Zur einfacheren Verwendung wird dies ebenfalls als Variable angelegt. &lt;sup&gt;&lt;a href=&quot;#1&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
-&lt;p&gt;AJAX INKLUSIVE: LADEN VON DATENSÄTZEN&lt;/p&gt;
-&lt;p&gt;Eines der Hauptargumente für den Einsatz von D3.js ist die Möglichkeit des asynchronen Ladens von Daten. Dafür stehen komfortable Funktionen zum Datenimport bereit. Der folgende Funktionsaufruf erzeugt einen AJAX-Request, um die JSON-Datei zu laden, parst den zurückgelieferten Text und speichert ihn in das JavaScript-Objekt data. Ab hier wird der weitere Code innerhalb dieses Callbacks geschrieben, um auf die Daten zugreifen zu können.
-zuvor definierten Skalen für x- und y-Achse müssen nun einem Wertebereich zugeordnet werden. Mit der D3-Funktion domain() lassen sich die Werte aus dem gefüllten data-Objekt auf die Achsen mappen. Der Wertebereich der x-Achse ist hier eine Auflistung einzelner Werte, die mit data.map(function(d) { return d.channel; }) der Achse zugeordnet werden. Die Daten lassen sich dabei über den Schlüssel channel auswählen. Für die y-Achse wird der Wertebereich ausgehend von 0 bis zum größten Wert innerhalb des Datensatzes via d3.max() mit dem Schlüssel quantity festgelegt.
-Dem SVG-Element wird zunächst ein Element g hinzugefügt.&lt;sup&gt;&lt;a href=&quot;#1&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
-&lt;p&gt;g is not actually a d3.js specific element.  It is a methodology in svg to group shapes together. &lt;sup&gt;&lt;a href=&quot;#2&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
-&lt;p&gt; Letzterem werden die Klassen axis und abscissa mitgegeben, über die es dann per CSS gestylt werden kann. Mit Hilfe des transform-Attributes erfolgt die Positionierung der x-Achse innerhalb des Diagramms. Da die zugehörigen Labels recht lang sind, ist es sinnvoll, diese leicht zu drehen und mit etwas Abstand zur Achse zu positionieren. Die abschließend aufgerufene Funktion call() mit der Variablen abscissa wendet die vorherigen Funktionen auf die jeweilige Achse an.
-&lt;sup&gt;&lt;a href=&quot;#1&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
-&lt;p&gt;Das Zeichnen der y-Achse ist in diesem Fall weniger umfangreich zu beschreiben, da die Labels nicht positioniert werden müssen. Es genügt, die entsprechenden Argumente auszutauschen. Die Aufteilung und Beschriftung der Achse(n) wird vollständig von D3.js übernommen.
-Objekt namens barChart erstellt. Dieses enthält den Funktionsaufruf selectAll(“rect”), der im SVG-Objekt alle übergebenen Rechtecke auswählt. Der Funktion data() werden die Daten zur Verfügung gestellt, und enter() gibt nun genau die zuvor selektierten Elemente zurück.&lt;sup&gt;&lt;a href=&quot;#1&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
-&lt;p&gt;Dem barChart-Objekt fügt man nun mittels append(“rect”) die Säulen auf Basis der Daten hinzu. Das Class-Attribut erleichtert auch hier späteres Styling. Schließlich gilt es noch, die Positionierung zu x- und y-Achse vorzunehmen und die Breite der Säulen mit der Funktion x.rangeBand() zuzuordnen.&lt;sup&gt;&lt;a href=&quot;#1&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
-&lt;p&gt;Um dem Diagramm Dynamik zu verleihen, werden die Säulen noch mit transition() animiert. Ziel ist es, sie von der x-Achse aus zeitversetzt zu ihrem jeweiligen Maximalwert anwachsen zu lassen. Dazu erhalten die Säulen vor dem Aufruf der Animation eine Höhe von 0. Die Funktion delay() ist für die Verzögerung der Animation zuständig, duration() bestimmt die Dauer in Millisekunden.
-Abschließend gilt es noch, SVG-Text für die Werte in den Säulen mit Hilfe von .append(“text”) zu ergänzen. Hierzu werden die Zahlenwerte zunächst zu den Achsen und Säulen positioniert. Da die meisten D3-Elemente gleichzeitig Objekte und Funktionen sind, lassen sich hier die anfangs definierten Variablen x und y für die Positionierung nutzen, zum Beispiel mit return x(d.channel). Nach der Ausrichtung des Textankers fehlt nur noch die Textausgabe, welche die Aufgabe der Funktion text() ist. &lt;sup&gt;&lt;a href=&quot;#1&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a id='1'&gt;1&lt;/a&gt; vgl. &lt;a href=&quot;http://t3n.de/magazin/javascript-bibliothek-d3-237224/&quot;&gt;http://t3n.de/magazin/javascript-bibliothek-d3-237224/&lt;/a&gt;
-&lt;a href=&quot;http://d3js.org/&quot;&gt;http://d3js.org/&lt;/a&gt;
-&lt;a id='2'&gt;2&lt;/a&gt; vgl. &lt;a href=&quot;https://www.linkedin.com/pulse/data-visualizations-using-d3js-brant-snow?trk=seokp_posts_primary_cluster_res_title&quot;&gt;https://www.linkedin.com/pulse/data-visualizations-using-d3js-brant-snow?trk=seokp_posts_primary_cluster_res_title&lt;/a&gt;
-&lt;a id='3'&gt;3&lt;/a&gt;  vgl. &lt;a href=&quot;http://d3js.org/&quot;&gt;http://d3js.org/&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
   </channel>

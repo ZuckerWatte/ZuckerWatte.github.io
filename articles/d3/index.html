@@ -9,7 +9,6 @@
     <link rel="alternate" href="http://localhost:8080/feed.xml" type="application/rss+xml" title="This site is built with Wintersmith, a Node.js based static site generator">
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic|Anonymous+Pro:400,700,400italic,700italic|Merriweather:400,700,300">
     <link rel="stylesheet" href="/css/main.css">
-    <script src="/scripts/app.js"></script>
   </head>
   <body class="article-detail">
     <header class="header">
@@ -77,43 +76,141 @@
 </div>
 </div>
 
-<p>In diesem Beitrag wird die Erstellung eines Barcharts innerhalb eines Ecmascript 6 Projektes mit Hilfe der der Javascript Bibliothek D3&nbsp;erläutert. </p>
+<p>In diesem Beitrag wird die Erstellung eines Barcharts zu einem Datenset aus der <em>experimental Motor Racing Developer <span class="caps">API</span></em> von <a href="http://ergast.com/mrd/">ergast.com</a> erläutert. Die Visualisierung wurde innerhalb eines Node.js Projektes mit Ecmascript 6 und Hilfe der der Javascript Bibliothek D3 erstellt. (Der generierte <span class="caps">SVG</span>-Code wurde in diesen Artikel&nbsp;kopiert) </p>
 <p><span class="more"></span></p>
 <h4 id="data-driven-documents">Data-Driven&nbsp;Documents</h4>
-<p>D3 steht für „Data-Driven Documents“ und wird seit 2011 von Mike Bostock als Open-Source-Bibliothek für Datenvisualisierung auf <a href="https://github.com/mbostock/d3">Github</a>  veröffentlicht, kontinuierlich erweitert und optimiert. Die Bibliothek erlaubt die Manipulation des <span class="caps">DOM</span> von HTML-Dokumenten auf der Grundlage von Datensätzen. Dafür nutzt sie die Möglichkeiten moderner Browser wie Chrome, Safari, Firefox, Opera oder IE9+ sowie der aktuellen Webstandards CSS3, HTML5 und SVG. maximale Flexibilität gelegt. Hohe Performance in der Verarbeitung großer Datenmengen und die Möglichkeit der dynamischen Manipulation von Animationen und Interaktionen sind weitere Features des Frameworks. D3 zeichnet sich unter anderem dadurch aus, dass es mit den unterschiedlichsten Dateiformaten umgehen kann. TEXT, JSON, XML, HTML, CSV oder TSV lassen sich – eine valide Datenstruktur vorausgesetzt – problemlos verarbeiten. Neben klassischen Diagrammarten wie Balken- oder Säulendiagrammen lassen sich mit D3 auch komplexere Arten wie Treemaps oder Akkorddiagramme realisieren. Zeitaufwand für die Einarbeitung ist nicht zu unterschätzen, mächtige Werkzeug, dynamic real time data visualizations <sup><a href="#1">1</a></sup>
-“D3 allows you to bind arbitrary data to a Document Object Model (<span class="caps">DOM</span>), and then apply data-driven transformations to the document.”<sup><a href="#3">3</a></sup>
-D3 is extremely fast, supporting large datasets and dynamic behaviors for interaction and animation. D3’s functional style allows code reuse through a diverse collection of components and plugins.<sup><a href="#3">3</a></sup>
-the d3.geo.path function, for example, projects geographic coordinates into <span class="caps">SVG</span> path data. <sup><a href="#3">3</a></sup></p>
-<p>Ähnlichkeit zu jQuery
-Dieses besteht neben dem Core aus den Komponenten Scales, <span class="caps">SVG</span>, Time, Layouts, Geography, Geometry und Behaviours. Im Kern verankert sind unter anderem Funktionen zur Auswahl von DOM-Elementen, zur Erstellung von Animationen, Verarbeitung von Daten und Manipulation von Farben. Die Bezeichnungen der anderen Komponenten deuten bereits auf ihre Funktionen hin. Eine detaillierte Erklärung findet sich in der <a href="https://github.com/mbostock/d3/wiki/API-Reference"><span class="caps">API</span>-Referenz von D3</a> . Darüber hinaus kann man die Funktionalität wie bei jQuery über Plugins erweitern, sollten die integrierten Möglichkeiten einmal doch nicht ausreichen. Eine weitere Ähnlichkeit zu jQuery ist das praktische Chaining, also das Verketten von Funktionen.<sup><a href="#1">1</a></sup>
-“If you have spent time as a front end developer, you know how tedious it can be to modify the <span class="caps">W3C</span> specified DOM.  JQuery’s popularity in recent years is many explained by its approach to simplify this methodology.  jQuery typical calls these “Selectors”.  In d3.js, they work similarly but are called … well “Selections”.” <sup><a href="#2">2</a></sup></p>
-<p>Styling
-<span class="caps">SVG</span> are Vector Graphics instead of Pixel based graphics and consequently some of the new CSS specifications help us to deal with them.  We are going to want crispEdges so we will include the new shape-rendering: crispEdges to accomplish this. <sup><a href="#2">2</a></sup></p>
-<p>Aufbau
-Neben der Einbindung von Stylesheets und Skripten empfiehlt es sich, einen <span class="caps">DIV</span>-Container bereitzustellen, in den später das Säulendiagramm gerendert wird. Der Container erhält die frei gewählte ID „bar-chart“ als eindeutigen Selektor 
-Code zur Generierung des Säulendiagramms: Zuerst werden die Dimensionen des Diagramms und dessen Randabstände bestimmt. In den Variablen „leftPadding“ und „bottomPadding“ legen wir einen größeren Abstand nach links und unten fest, der für die Darstellung der Achsenlabels notwendig ist.
-Skala für die x-Achse. Beim Säulendiagramm nutzt man dafür die Ordinalskala, die D3 mit der Funktion ordinal() bereitstellt. rangeRoundBands sorgt dann dafür, dass die Auswahl an zu verarbeitenden Werten in separate Säulen unterteilt wird. <sup><a href="#1">1</a></sup>
- The rangeRoundBands method computes range values so as to divide the chart area into evenly-spaced, evenly-sized bands, as in a bar chart.<sup><a href="#2">2</a></sup>
-leftPadding und width-padding legen den Bereich fest, in dem die Säulen aufgeteilt werden. Auch der Abstand zwischen den Säulen lässt sich einstellen.
-Zur linearen Skalierung der y-Achse nutzen wir die Funktion linear(). Der Bereich für die Darstellung der Achse wird mit height - bottomPadding sowie padding definiert. Zu beachten ist hierbei, den Bereich umgekehrt anzugeben, da D3.js immer von y=0 ausgeht.
-Definition der beiden Achsen erfolgt nun mit Hilfe des Funktionsaufrufs d3.svg.axis(). Der folgenden Funktion scale() wird mit den Variablen x oder y jeweils übergeben, welche Skalierung genutzt werden soll. Die Lage der Achsenbezeichnung bestimmt man mit Hilfe von orient().
-Bevor die <span class="caps">JSON</span>-Daten geladen werden können, muss nun noch das SVG-Element definiert und dem DIV-Container #bar-chart zugewiesen werden. Zur einfacheren Verwendung wird dies ebenfalls als Variable angelegt. <sup><a href="#1">1</a></sup></p>
-<p><span class="caps">AJAX</span> INKLUSIVE: LADEN VON&nbsp;DATENSÄTZEN</p>
-<p>Eines der Hauptargumente für den Einsatz von D3.js ist die Möglichkeit des asynchronen Ladens von Daten. Dafür stehen komfortable Funktionen zum Datenimport bereit. Der folgende Funktionsaufruf erzeugt einen <span class="caps">AJAX</span>-Request, um die JSON-Datei zu laden, parst den zurückgelieferten Text und speichert ihn in das JavaScript-Objekt data. Ab hier wird der weitere Code innerhalb dieses Callbacks geschrieben, um auf die Daten zugreifen zu können.
-zuvor definierten Skalen für x- und y-Achse müssen nun einem Wertebereich zugeordnet werden. Mit der D3-Funktion domain() lassen sich die Werte aus dem gefüllten data-Objekt auf die Achsen mappen. Der Wertebereich der x-Achse ist hier eine Auflistung einzelner Werte, die mit data.map(function(d) { return d.channel; }) der Achse zugeordnet werden. Die Daten lassen sich dabei über den Schlüssel channel auswählen. Für die y-Achse wird der Wertebereich ausgehend von 0 bis zum größten Wert innerhalb des Datensatzes via d3.max() mit dem Schlüssel quantity festgelegt.
-Dem SVG-Element wird zunächst ein Element g hinzugefügt.<sup><a href="#1">1</a></sup></p>
-<p>g is not actually a d3.js specific element.  It is a methodology in svg to group shapes together. <sup><a href="#2">2</a></sup></p>
-<p> Letzterem werden die Klassen axis und abscissa mitgegeben, über die es dann per <span class="caps">CSS</span> gestylt werden kann. Mit Hilfe des transform-Attributes erfolgt die Positionierung der x-Achse innerhalb des Diagramms. Da die zugehörigen Labels recht lang sind, ist es sinnvoll, diese leicht zu drehen und mit etwas Abstand zur Achse zu positionieren. Die abschließend aufgerufene Funktion call() mit der Variablen abscissa wendet die vorherigen Funktionen auf die jeweilige Achse an.
-<sup><a href="#1">1</a></sup></p>
-<p>Das Zeichnen der y-Achse ist in diesem Fall weniger umfangreich zu beschreiben, da die Labels nicht positioniert werden müssen. Es genügt, die entsprechenden Argumente auszutauschen. Die Aufteilung und Beschriftung der Achse(n) wird vollständig von D3.js übernommen.
-Objekt namens barChart erstellt. Dieses enthält den Funktionsaufruf selectAll(“rect”), der im <span class="caps">SVG</span>-Objekt alle übergebenen Rechtecke auswählt. Der Funktion data() werden die Daten zur Verfügung gestellt, und enter() gibt nun genau die zuvor selektierten Elemente zurück.<sup><a href="#1">1</a></sup></p>
-<p>Dem barChart-Objekt fügt man nun mittels append(“rect”) die Säulen auf Basis der Daten hinzu. Das Class-Attribut erleichtert auch hier späteres Styling. Schließlich gilt es noch, die Positionierung zu x- und y-Achse vorzunehmen und die Breite der Säulen mit der Funktion x.rangeBand() zuzuordnen.<sup><a href="#1">1</a></sup></p>
-<p>Um dem Diagramm Dynamik zu verleihen, werden die Säulen noch mit transition() animiert. Ziel ist es, sie von der x-Achse aus zeitversetzt zu ihrem jeweiligen Maximalwert anwachsen zu lassen. Dazu erhalten die Säulen vor dem Aufruf der Animation eine Höhe von 0. Die Funktion delay() ist für die Verzögerung der Animation zuständig, duration() bestimmt die Dauer in Millisekunden.
-Abschließend gilt es noch, <span class="caps">SVG</span>-Text für die Werte in den Säulen mit Hilfe von .append(“text”) zu ergänzen. Hierzu werden die Zahlenwerte zunächst zu den Achsen und Säulen positioniert. Da die meisten D3-Elemente gleichzeitig Objekte und Funktionen sind, lassen sich hier die anfangs definierten Variablen x und y für die Positionierung nutzen, zum Beispiel mit return x(d.channel). Nach der Ausrichtung des Textankers fehlt nur noch die Textausgabe, welche die Aufgabe der Funktion text() ist. <sup><a href="#1">1</a></sup></p>
-<p><a id='1'>1</a> vgl. <a href="http://t3n.de/magazin/javascript-bibliothek-d3-237224/">http://t3n.de/magazin/javascript-bibliothek-d3-237224/</a>
-<a href="http://d3js.org/">http://d3js.org/</a>
-<a id='2'>2</a> vgl. <a href="https://www.linkedin.com/pulse/data-visualizations-using-d3js-brant-snow?trk=seokp_posts_primary_cluster_res_title">https://www.linkedin.com/pulse/data-visualizations-using-d3js-brant-snow?trk=seokp_posts_primary_cluster_res_title</a>
-<a id='3'>3</a>  vgl. <a href="http://d3js.org/">http://d3js.org/</a></p>
+<p>“D3 allows you to bind arbitrary data to a Document Object Model (<span class="caps">DOM</span>), and then apply data-driven transformations to the document.”<sup><a href="#3">3</a></sup> Dieser Satz fasst die Grundfunktionalität der Open-Source-Bibliothek D3 zusammen, deren drei D’s dementsprechend für “Data-Dricen Documents” stehen. Seit 2011 wird sie von Mike Bostock auf <a href="https://github.com/mbostock/d3">Github</a> veröffentlicht und kontinuierlich erweitert.<sup><a href="#1">1</a></sup> Mit der Datenvisualisierungsbibliothek können <span class="caps">DOM</span>-Elemente auf der Grundlage von Datensätzen manipuliert und animiert werden und auch interaktive Funktionen lassen sich realisieren.
+Die Library nutzt die aktuellen Webstandards CSS3, HTML5 und SVG und bietet maximale Flexibilität beim Erstellen von Visualisierungen. Die hohe Performance in der Verarbeitung großer Datenmengen und die Kompatibilität zu unterschiedlichsten Dateiformaten<sup><a href="#4">4</a></sup>  zählen zu den großen Pluspunkten der Bibliothek.<sup><a href="#1">1</a></sup> Der funktionale Aufbau erleichtert das Erstellen von Plugins, die wiederverwendt werden können. Eine Liste von freien Plugins stellt Mike Bostock ebenfalls auf <a href="https://github.com/mbostock/d3/wiki/Plugins">GitHub</a> zur Verfügung.
+D3 bietet neben den klassischen Visualisierungsarten wie Balken- oder Kuchendiagrammen die Möglichkeit auch komplexere Darstellungen wie Streamgraphen<sup><a href="#5">5</a></sup>, Chords<sup><a href="#6">6</a></sup> und Choropleths<sup><a href="#7">7</a></sup> oder eigene kreative Lösungen zu&nbsp;realisieren. </p>
+<h4 id="-hnlichkeit-zu-jquery">Ähnlichkeit zu&nbsp;jQuery</h4>
+<p>Neben Funktionen zur Verarbeitung von Daten stellt D3 wie schon erwähnt Funktionen zur Manipulation von <span class="caps">DOM</span>-Elementen und zur Erstellung von Animationen bereit. Frontendentwicklern, die bereits Erfahrung mit der Javascript-Library jQuery haben, kommt diese Ähnlichkeit zu Gute. Nicht nur die Begrifflichkeiten<sup><a href="#8">8</a></sup> und Funktionen zur <span class="caps">DOM</span>-Manipulation sind ableitbar, sondern auch Chaining, also die Verkettung von Funktionsaufrufen, funktioniert bei D3 analog. Auch die bereits angesprochene Erweiterbarkeit durch Plugins, ist von jQuery bekannt. <sup><a href="#3">3</a></sup>
+Dennoch ist “der Zeitaufwand für die Einarbeitung […] nicht zu unterschätzen”<sup><a href="#1">1</a></sup>, da D3 ein mächtiges Werkzeug ist, dessen Potenzial bis zu dynamischen Echtzeit Visualisierungen reicht. Eine Dokumentation der Funktionen findet sich in der <a href="https://github.com/mbostock/d3/wiki/API-Reference"><span class="caps">API</span>-Referenz von D3</a>&nbsp;. </p>
+<h4 id="styling">Styling</h4>
+<p>Anderst als pixelbasierte Grafiken sind SVGs als Skalierbare Vektor Grafken mit <span class="caps">CSS</span> stylebar. 
+Properties wie <em>shape-rendering</em> für <span class="caps">SVG</span>-Elemente sind teilweise recht spezifisch und müssen anfangs gegebenenfalls beim <a href="https://www.w3.org/TR/SVG/styling.html"><span class="caps">W3C</span></a> nachgeschlagen werden. <sup><a href="#2">2</a></sup></p>
+<h4 id="anzahl-der-fahrer-pro-nation">Anzahl der Fahrer pro&nbsp;Nation</h4>
+<p>Im Markup Template wird ein Div-Container bereitgestellt, in den der <span class="caps">SVG</span>-Code gerendert wird.
+Die ID des Containers wird zusammen mit den darzustellenden Daten<sup><a href="#9">9</a></sup> an das D3-Skript übergeben. In diesem werden vor der Generierung des Balkendiagramms die Dimensionen der Visualisierung und ihre Randabstände bestimmt. Für die Darstellung der Achsenlabels wird nach links und nach unten mehr Platz benötigt und in <em>leftPadding</em> und <em>bottomPadding</em> berücksichtigt. Zusätzlich wird mit Hilfe des npm-Packages <em>uuid</em> ein Universal Unique Identifier generiert, der als Selektor dem <span class="caps">SVG</span>-Element zugeordnet werden soll. In einer verteilten Anwendung mit vielen ggf. dynamischen SVG-Visualisierungen würde eine solche global eindeutige ID die Zuordnung erleichterten und dabei helfen Konflikte (z.B. das Überschreiben/Aktualisieren eines falschen SVGs) zu vermeiden.<br>Einem vordefinierten <span class="caps">SVG</span>-Template<sup><a href="#10">10</a></sup> wird anschließend die bereits definierte Viewbox zugewiesen und die uuid zugewisen und dieses <span class="caps">SVG</span>-Element dem DOM (innerhalb des vorgesehenen Div-Contaienrs) hinzugefügt. Nun wird die Funktion aufgerufen, die die eigentliche Visualisierung zeichnet. Ihr werden sowohl die erzeugte uuid (id des SVG-Elements), die darzustellenden Daten, die festgelegte Breite und Höhe des SVGs (jeweils abzüglich der Randabstände) und die Randabstände als Parameter&nbsp;übergeben.</p>
+<pre><code class="lang-javascript"><span class="keyword">export</span> <span class="keyword">default</span> <span class="function"><span class="keyword">function</span>(<span class="params">containerId, data</span>) </span>{
+    <span class="keyword">const</span> container = <span class="built_in">document</span>.getElementById(containerId)
+    <span class="keyword">const</span> width = <span class="number">800</span>
+    <span class="keyword">const</span> height = <span class="number">600</span>
+    <span class="keyword">const</span> margin = {
+        top: <span class="number">5</span>,
+        right: <span class="number">0</span>,
+        left: <span class="number">55</span>,
+        bottom: <span class="number">145</span>
+    }
+
+    <span class="keyword">const</span> viewBox = <span class="string">`0 0 <span class="subst">${width}</span> <span class="subst">${height}</span>`</span>
+    <span class="keyword">const</span> w = width - margin.left - margin.right
+    <span class="keyword">const</span> h = height - margin.top - margin.bottom
+
+    <span class="keyword">if</span> (!(data <span class="keyword">instanceof</span> <span class="built_in">Array</span>)) {
+        <span class="keyword">return</span>
+    }
+
+    <span class="keyword">const</span> id = <span class="string">'chart-'</span> + uuid.v4()
+    <span class="keyword">const</span> svg = tpl({
+        id,
+        viewBox
+    })
+
+    container.innerHTML = svg
+
+    draw(id, data, w, h, margin)
+}
+</code></pre>
+<p>Die <em>draw</em> Funktion zeichnet zuerst das Kooradinatensystem, in welchem die Balken später dargestellt werden und verteilt die Werte aus dem übergebenem Datenarray an dessen Achsen. 
+Die Skala der x-Achse wird von D3 mit der Funktion <em>ordinal()</em> bereitgestellt und die <em>rangeRoundBands()</em> Methode berechnet eine gleichmäßige, horizontale Verteilung der einzelnen Balken über die der <em>draw</em> Funktion übergebenen Breite des SVGs. Mit der D3-Methode <em>domain()</em>  können jetzt die zur verarbeitenden Werte, auf die X-Achse gemappt werden. Da insgesamt zehn verschiedene Nationen in den Fahrerdaten vertreten waren, werden zehn Marken entlang der X-Achse gesetzt auf denen die Balken des Diagramms&nbsp;wachsen.          </p>
+<p>Zur linearen Skalierung der y-Achse wird die Funktion <em>linear()</em> genutzt. Der Bereich für die Darstellung der Achse wird mit der übergebenen Höhe definiert. Zu beachten ist, dass D3 immer von y = 0 ausgeht und der Bereich daher genau anderst herum angegeben werden<sup><a href="#11">11</a></sup>. Ebenfalls mit <em>domain()</em> werden die im Datenarray übergebenen Werte zur Fahreranzahl innerhalb einer Nation als Skala für die Y-Achse verwendet. Der Bereich wird von 0 bis zum maximalen Wert im Datenset&nbsp;festgelegt.  </p>
+<pre><code class="lang-javascript"><span class="function"><span class="keyword">function</span> <span class="title">draw</span>(<span class="params">chartId, data, width, height, margin</span>) </span>{
+    <span class="keyword">const</span> svg = d3.select(<span class="string">`#<span class="subst">${chartId}</span>`</span>)
+    <span class="keyword">const</span> x = d3.scale.ordinal().rangeRoundBands([<span class="number">0</span>, width], <span class="number">0.1</span>)
+    <span class="keyword">const</span> y = d3.scale.linear().range([height, <span class="number">0</span>])
+    <span class="keyword">const</span> xAxis = d3.svg.axis()
+        .scale(x)
+        .orient(<span class="string">'bottom'</span>)
+        .ticks(<span class="number">10</span>)
+    <span class="keyword">const</span> yAxis = d3.svg.axis()
+        .scale(y)
+        .orient(<span class="string">'left'</span>)
+        .ticks(<span class="number">10</span>)
+
+    x.domain(data.map(<span class="function"><span class="keyword">function</span>(<span class="params">d</span>) </span>{
+        <span class="keyword">return</span> d.nationality
+    }))
+    y.domain([
+        <span class="number">0</span>, d3.max(data, <span class="function"><span class="keyword">function</span>(<span class="params">d</span>) </span>{
+            <span class="keyword">return</span> d.count
+        })
+    ])
+
+  ...
+</code></pre>
+<p>Der zweite Teil der <em>draw</em> Funktion fügt dem <span class="caps">SVG</span>-Element unter Verwendung der übergebenen Daten und der im ersten Teil erzeugten Konstanten alle benötigten Elemente zur Darstellung des Balkendiagramms hinzu. Für die Achsen werden zunächst g-Elementesup&gt;<a href="#12">12</a></sup> erzeugt. Diesen werden zwei Attribute, ein Klassenname für eventuelles Styling und ein transform-Attribut für die Positionierung der Achse innerhalb des Diagramms vergeben. Anschließend werden mit der Methode <em>call()</em> die im ersten Teil des Skripts in einer Konstanten gespeicherten Funktionen auf die jeweilige Achse&nbsp;angewendet.</p>
+<p>Als nächstets wird noch die Beschriftung der Achsen als <span class="caps">SVG</span>-Text mit Hilfe von <em>append(“text”)</em>  vorgenommen. Dem Text Element können auch verschiedene Attribute, z.B. für <em>transform</em> für die Rotation eines Textes, <em>x</em> und <em>y</em> für die absolute Positionierung und <em>dx</em> und <em>dy</em> für Offsetwerte zur Textplatzierung relativ zu den absoulten&nbsp;Werten. </p>
+<p>Zuletzt wird die eigentliche Visualisierung der Daten implementiert. Dabei wird innerhalb des <span class="caps">SVG</span>-Elements mit <em>selectAll()</em> eine Auswahl an <span class="caps">DOM</span>-Elementen getroffen, an welche die zu visualisierenden Daten gebunden werden sollen. Obwohl zu diesem Zeitpunkt noch keine DOM-Elemente mit der Klasse <em>bar</em> existieren, werden diese als Selektion ausgewählt. Die <em>selectAll()</em> Methode liefert also eine leere Auswahl zurück, die also vorerst nur die späteren Elemente mit der Klasse <em>bar</em> vertritt. Die <em>data()</em> Methode bindet nun das übergebene Datenarray an die Selektion. D.h. die enthaltenen Datensätze werden gezählt, ihre Werte geparst und alle nachfolgenden Funktionen so oft ausgeführt wie Datensätze existieren. Um nun neue, an diese Datensätze gebundene Elemente zu erzeugen, wird die D3-Funktion <em>enter()</em> verwendet. Sie untersucht das <span class="caps">DOM</span> und die Anzahl der vorhandenen Datenwerte. Sind weniger DOM-Elemente vorhanden als Daten, erstellt sie ein neues Element als Platzhalter, auf welchem die nachfolgenden Funktionen ausgeführt werden können. <sup><a href="#13">13</a></sup></p>
+<p>Dank D3s <em>enter()</em> Methode wird mit <em>append(‘rect’)</em> für jede der zehn Nationen im Datenarray ein Balken in Form eines einfachen <span class="caps">SVG</span> Rechteck-Shapes erstellt. Diese erhalten jeweils ein Klassenattribut mit dem Wert <em>bar</em> (bei einer dynamischen Visualisierung würde <em>selectAll(‘bar’)</em> bei erneutem Aufruf von <em>draw</em> die bereits gerenderten Balken als Selektion auswählen), die Attribute <em>x</em> und <em>y</em> für die Positionierung im Koordinatensystem und die Attribute <em>width</em> und <em>height</em>. Der X-Wert eines Balkens wird anhand der vorher festgelegten X-Achse festgelegt, ebenso der Y-Wert, er entpricht der Anzahl an Fahrern. Die Höhe eines Balken errechnet sich aus der Höhe des SVGs abzüglich des Abstands zum Datenwert für die Fahreranzahl auf der Y-Achse. Die Breite wird von der D3-Methode <em>rangeBand()</em> automatisch entsprechend des verfügbaeren Platzes&nbsp;berechnet.</p>
+<pre><code class="lang-javascript">...
+
+svg
+        .append(<span class="string">'g'</span>)
+        .attr(<span class="string">'class'</span>, <span class="string">'x axis'</span>)
+        .attr(<span class="string">'transform'</span>, <span class="string">`translate(<span class="subst">${margin.left}</span>, <span class="subst">${height}</span>)`</span>)
+        .call(xAxis)
+        .selectAll(<span class="string">'text'</span>)
+        .style(<span class="string">'text-anchor'</span>, <span class="string">'end'</span>)
+        .attr(<span class="string">'dx'</span>, <span class="string">'-.5em'</span>)
+        .attr(<span class="string">'dy'</span>, <span class="string">'.5em'</span>)
+        .attr(<span class="string">'transform'</span>, <span class="string">'rotate(-45)'</span>)
+
+    svg
+        .append(<span class="string">'g'</span>)
+        .attr(<span class="string">'class'</span>, <span class="string">'y axis'</span>)
+        .attr(<span class="string">'transform'</span>, <span class="string">`translate(<span class="subst">${margin.left}</span>, 0)`</span>)
+        .call(yAxis)
+        .append(<span class="string">'text'</span>)
+        .attr(<span class="string">'transform'</span>, <span class="string">'rotate(-90)'</span>)
+        .attr(<span class="string">'y'</span>, <span class="number">6</span>)
+        .attr(<span class="string">'dy'</span>, <span class="string">'0.71em'</span>)
+        .style(<span class="string">'text-anchor'</span>, <span class="string">'end'</span>)
+        .text(<span class="string">'Count'</span>)
+
+    svg
+        .selectAll(<span class="string">'bar'</span>)
+        .data(data)
+        .enter()
+        .append(<span class="string">'rect'</span>)
+        .attr(<span class="string">'class'</span>, <span class="string">'bar'</span>)
+        <span class="comment">/* Animation im Originalprojekt
+        .attr("y", height) //set y-axis at the bottom for the transition
+        .attr("height", 0) //set height of bars to 0 for the transition    
+        .transition()
+        .delay(100)
+        .duration(1000)
+        */</span>
+        .attr(<span class="string">'height'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">d</span>) </span>{
+            <span class="keyword">return</span> height - y(d.count)
+        })
+        .attr(<span class="string">'y'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">d</span>) </span>{
+            <span class="keyword">return</span> y(d.count)
+        })
+        .attr(<span class="string">'x'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">d</span>) </span>{
+            <span class="keyword">return</span> x(d.nationality) + margin.left
+        })
+        .attr(<span class="string">'width'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>{
+            <span class="keyword">return</span> x.rangeBand()
+        })
+}
+</code></pre>
+<p>Im Originalprojekt wurde der Visualisierung mit einer in D3 sehr einfach zu erstellenden Transition noch etwas Dynamik verliehen werden. Die Säulen wurden mit der Funktion <em>transition()</em> von der X-Achse aus zeitversetzt zu ihrem jeweiligen maximalen Höhenwert animiert. Dazu wurde vor dem Aufruf der Transition die Y-Achse auf den Wert der <span class="caps">SVG</span>-Höhe verschoben, da ihr Wertebereich umgekehrt ist. Zusätzlich wurde die Höhe der Balken vor der Animation auf null gesetzt. Die Funktion <em>delay()</em> ist für die Verzögerung der Animation zuständig, <em>duration()</em> bestimmt die Dauer in Millisekunden. <sup><a href="#1">1</a></sup></p>
+<hr>
+<div class='footnotes'>
+
+<a id='1'>1</a> vgl. <a href="http://t3n.de/magazin/javascript-bibliothek-d3-237224/">http://t3n.de/magazin/javascript-bibliothek-d3-237224/</a><br><a id='2'>2</a> vgl. <a href="https://www.linkedin.com/pulse/data-visualizations-using-d3js-brant-snow?trk=seokp_posts_primary_cluster_res_title">https://www.linkedin.com/pulse/data-visualizations-using-d3js-brant-snow?trk=seokp_posts_primary_cluster_res_title</a><br><a id='3'>3</a>  vgl. <a href="http://d3js.org/">http://d3js.org/</a><br><a id='4'>4</a>  <span class="caps">TEXT</span>, JSON, XML, HTML, CSV, TSV<br><a id='5'>5</a> “A streamgraph […] is a type of stacked area graph which is displaced around a central axis, resulting in a flowing, organic shape.” (vgl. <a href="https://en.wikipedia.org/wiki/Streamgraph">https://en.wikipedia.org/wiki/Streamgraph</a>)<br><a id='6'>6</a> “A chord diagram is a graphical method of displaying the inter-relationships between data in a matrix. The data is arranged radially around a circle with the relationships between the points typically drawn as arcs connecting the data together.” (vgl. <a href="https://en.wikipedia.org/wiki/Chord_diagram">https://en.wikipedia.org/wiki/Chord_diagram</a>)<br><a id='7'>7</a>  “A choropleth map […] is a thematic map in which areas are shaded or patterned in proportion to the measurement of the statistical variable being displayed on the map, such as population density or per-capita income.” (vgl. <a href="https://en.wikipedia.org/wiki/Choropleth_map">https://en.wikipedia.org/wiki/Choropleth_map</a>)<br><a id='8'>8</a>Genau wie in jQuery werden <span class="caps">DOM</span>-Elemente bei D3 anhand von CSS-Selektoren ausgewählt, allerdings werden diese im Umgang mit der Bilbliothek als “selections” bezeichnet. (vgl. <a href="https://www.linkedin.com/pulse/data-visualizations-using-d3js-brant-snow?trk=seokp_posts_primary_cluster_res_title">https://www.linkedin.com/pulse/data-visualizations-using-d3js-brant-snow?trk=seokp_posts_primary_cluster_res_title</a>)<br><a id='9'>9</a> Für das Beispiel wurden die <a href="http://ergast.com/api/f1/drivers.json">Fahrerdaten</a> der <em>experimental Motor Racing Developer <span class="caps">API</span></em> verwendet. Aus ihnen wurde ein Array mit Objekten, die zum einen die Nationalität und zum anderen, die Häufigkeit dieser Nationalität enthalten, an das D3-Skript übergeben. Das Barchart stellt später die Anzahl der Fahrer pro Nation dar.<br><a id='10'>10</a> Am Anfang des D3-Skripts wurde dieses Template importiert: <code>js import tpl from &#39;../templates/filename.hbs&#39;</code><br><a id='11'>11</a> Statt mit [0, height] wird also [height, 0] als Range definiert. (vgl. <a href="https://www.linkedin.com/pulse/data-visualizations-using-d3js-brant-snow?trk=seokp_posts_primary_cluster_res_title">https://www.linkedin.com/pulse/data-visualizations-using-d3js-brant-snow?trk=seokp_posts_primary_cluster_res_title</a>)<br><a id='12'>12</a> “It is a methodology in svg to group shapes together.”
+<a id='13'>13</a> vgl. <a href="http://alignedleft.com/tutorials/d3/binding-data">http://alignedleft.com/tutorials/d3/binding-data</a>
+</div>  
 </section>
         </article>
       </div>
