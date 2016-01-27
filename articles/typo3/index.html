@@ -23,30 +23,30 @@
       <div class="content-wrap">
         <article class="article">
           <section class="content"><p><img src='https://upload.wikimedia.org/wikipedia/commons/5/58/Logo_TYPO3.svg' height='265px' /></p>
-<p>Ein wirklich ganz kurzer Überblick über das Content-Management-System&nbsp;Typo3. </p>
+<p>Ein ganz kurzer Überblick über das Content-Management-System&nbsp;Typo3. </p>
 <p><span class="more"></span></p>
-<h4 id="-die-typo3-community-hat-probleme-sup-1-1-sup-">“Die Typo3 Community hat Probleme” <sup><a href="#1">1</a></sup></h4>
-<p><span class="caps">NEOS</span>
- “Typo3 Community hat&nbsp;Probleme”</p>
-<ul>
-<li>eigenes&nbsp;Templating</li>
-<li>eigenes&nbsp;Framework</li>
-<li>eigene <span class="caps">PHPCR</span>&nbsp;implementation</li>
-<li>sollte Typo3 Version 5&nbsp;werden</li>
-</ul>
-<p><span class="caps">TYPO3</span></p>
-<ul>
-<li>Typo3 Version&nbsp;7</li>
-<li>große&nbsp;Community</li>
-<li>“technologisch auf schlechtem&nbsp;Fuß”</li>
-<li>alte und komplexe&nbsp;Codebase</li>
-<li>schlechtes Datenbank&nbsp;design</li>
-<li>symfony console crippled&nbsp;(Eigenentwicklung)</li>
-</ul>
+<h4 id="the-typo3-universe-sup-1-1-sup-">The <span class="caps">TYPO3</span> Universe<sup><a href="#1">1</a></sup></h4>
+<p>Wie <a href="/articles/drupal">Drupal</a> ist auch Typo3 ein Open Source Projekt, das in <span class="caps">PHP</span> programmiert wurde. Im Vergleich zu Drupal, ist Typo3 jedoch ein Enterprise Content-Management-System und damit speziell für den Einsatz in Unternehmen<sup><a href="#3">3</a></sup> entwickelt worden. Wie bei <a href="/articles/drupal">Drupal</a> gibt es auch bei Typo3 Erweiterungen zur Standardinstallation, die als Extensions im Typo3 “App Store” ausgewählt und über den built-in Extension-Manager des Content-Management-Systems installiert werden können. Zum Funktionsumfang der Core Installation gehören unter anderem eine granulierte Rechteverwaltung, die Möglichkeit für mehrsprachige Sites, responsive Templates und <span class="caps">HTML5</span>-Unterstützung, eine API für Extension-Developer und ein Suchindex über das Back- und Frontend.<sup><a href="#2">2</a></sup> </p>
+<h4 id="usability">Usability</h4>
+<p>Im Gegensatz zu <a href="/articles/drupal">Drupal</a> besteht Typo3 (wie die meisten andren Content-Management-Systeme) aus einem Frontend für den Nutzer der Website und einem administrativen Backend mit hierarchischem Seitenbaum für den Bearbeiter. Mit Hilfe einer Extension kann beim Bearbeiten am Desktop die Vorschau der Ansicht auf Mobilgeräten mit eingeblendet werden. <sup><a href="#2">2</a></sup> Im Vergleich zu <a href="/articles/drupal">Drupal</a> können viele Konfigurationen allerdings nur im TypoScript vorgenommen&nbsp;werden.</p>
+<h4 id="typoscript">TypoScript</h4>
+<p>TypoScript ist eine Metasprache, die ausschließlich beschreibend ist. Die Syntax von TypoScript basiert auf der hierarchischen Strukturierung von Informationen in <span class="caps">ASCII</span> text.<sup><a href="#5">5</a></sup> In Typo3 werden Konfigurationsparameter mit TypoScript definiert, d.h. Objekte verschiedener Typen werden erzeugt und ihnen die gewünschten Werte zugewiesen. Um von der Anwendung als Konfiguration verwendet werden zu können, wird das TypoScript geparst und in ein <span class="caps">PHP</span>-Array transformiert.<sup><a href="#6">6</a></sup> Mit TypoScript lassen sich nahezu alle Aspekte einer Typo3 Installation konfigurieren, was das System sehr viel Flexibilität verleiht. Gleichzeitig muss jedoch zusätzlich zur Syntax ein fundiertes Wissen über die Systemeigenschaften von Typo3 aufgebaut werden, um die Konfigurationsfreiheit voll ausschöpfen zu&nbsp;können.</p>
+<pre><code> page = PAGE
+ page.10 = TEXT
+ page.10.value = Hello, world!
+ page.10.wrap = &lt;h2&gt;|&lt;/h2&gt;
+</code></pre><h4 id="-die-typo3-community-hat-probleme-sup-7-7-sup-">“Die Typo3 Community hat Probleme” <sup><a href="#7">7</a></sup></h4>
+<p>Während der Entwicklung der Typo3 Version 5.0 wurde das Projekt Neos in Form eines eigenen Development-Branches gergründet. Nachdem die Entwicklungszweige aufgrund der alten und complexen Codebasis von Typo3 stark außeinanderliefen, beschloß die Typo3 Community Neos als eigentständiges Produkt und unabhängig von Typo3 weiter zu entwickeln. Die Begründung für diese Entscheidung trifft das Neos Team&nbsp;foglendermaßen:</p>
+<blockquote>
+<p>“The <span class="caps">TYPO3</span> team and the Neos team have realized more and more that TYPO3 CMS and Neos are two very distinct products, with different requirements, different underlying assumptions of how a modern CMS should be built and different target groups.” <sup><a href="#8">8</a></sup></p>
+</blockquote>
+<p><br>                 </p>
 <hr>
-<p><div class='footnotes'>
-    <a id='1'>1</a> Patrik Karisch, Webentwickler bei der pixelart GmbH, 68506 Salzburg, “Vorstellung Symphony Framework”,&nbsp;19.01.2016</p>
-</section>
+<div class='footnotes'> 
+    <a id='1'>1</a> vgl. <a href="https://typo3.org/about/">https://typo3.org/about/</a><br>    <a id='2'>2</a> vgl. <a href="https://typo3.org/typo3-cms/key-features/">https://typo3.org/typo3-cms/key-features/</a><br>    <a id='3'>3</a> z.B. für den Betrieb eines firmeneigenen Intranets <a href="http://www.typoblog.de/intranet-mit-typo3-cms/">http://www.typoblog.de/intranet-mit-typo3-cms/</a><br>    <a id='4'>4</a> vgl. <a href="https://www.aoe.com/de/produkte/typo3.html">https://www.aoe.com/de/produkte/typo3.html</a><br>    <a id='5'>5</a> vgl. <a href="https://docs.typo3.org/typo3cms/TyposcriptSyntaxReference/AppendixA/Index.html#what-is-typoscript">https://docs.typo3.org/typo3cms/TyposcriptSyntaxReference/AppendixA/Index.html#what-is-typoscript</a><br>    <a id='6'>6</a>  <a href="https://docs.typo3.org/typo3cms/TyposcriptSyntaxReference/AppendixA/PhpArrays/Index.html">https://docs.typo3.org/typo3cms/TyposcriptSyntaxReference/AppendixA/PhpArrays/Index.html</a><br>    <a id='7'>7</a> Patrik Karisch, Webentwickler bei der pixelart GmbH, 68506 Salzburg, “Vorstellung Symphony Framework”, 19.01.2016<br>    <a id='8'>8</a> vgl. <a href="https://www.neos.io/learn/neos-split-faq.html#why-are-you-splitting-and-why-now">https://www.neos.io/learn/neos-split-faq.html#why-are-you-splitting-and-why-now</a>
+
+    Bild: <a href="https://typo3.org/">https://typo3.org/</a>
+</div></section>
         </article>
       </div>
     </div>

@@ -266,30 +266,30 @@ svg
       <guid isPermaLink="true">http://localhost:8080/articles/typo3/</guid>
       <author></author>
       <description>&lt;p&gt;&lt;img src='https://upload.wikimedia.org/wikipedia/commons/5/58/Logo_TYPO3.svg' height='265px' /&gt;&lt;/p&gt;
-&lt;p&gt;Ein wirklich ganz kurzer Überblick über das Content-Management-System Typo3. &lt;/p&gt;
+&lt;p&gt;Ein ganz kurzer Überblick über das Content-Management-System Typo3. &lt;/p&gt;
 &lt;p&gt;&lt;span class=&quot;more&quot;&gt;&lt;/span&gt;&lt;/p&gt;
-&lt;h4 id=&quot;-die-typo3-community-hat-probleme-sup-1-1-sup-&quot;&gt;“Die Typo3 Community hat Probleme” &lt;sup&gt;&lt;a href=&quot;#1&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/h4&gt;
-&lt;p&gt;NEOS
- “Typo3 Community hat Probleme”&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;eigenes Templating&lt;/li&gt;
-&lt;li&gt;eigenes Framework&lt;/li&gt;
-&lt;li&gt;eigene PHPCR implementation&lt;/li&gt;
-&lt;li&gt;sollte Typo3 Version 5 werden&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;TYPO3&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Typo3 Version 7&lt;/li&gt;
-&lt;li&gt;große Community&lt;/li&gt;
-&lt;li&gt;“technologisch auf schlechtem Fuß”&lt;/li&gt;
-&lt;li&gt;alte und komplexe Codebase&lt;/li&gt;
-&lt;li&gt;schlechtes Datenbank design&lt;/li&gt;
-&lt;li&gt;symfony console crippled (Eigenentwicklung)&lt;/li&gt;
-&lt;/ul&gt;
+&lt;h4 id=&quot;the-typo3-universe-sup-1-1-sup-&quot;&gt;The TYPO3 Universe&lt;sup&gt;&lt;a href=&quot;#1&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/h4&gt;
+&lt;p&gt;Wie &lt;a href=&quot;http://localhost:8080/articles/drupal&quot;&gt;Drupal&lt;/a&gt; ist auch Typo3 ein Open Source Projekt, das in PHP programmiert wurde. Im Vergleich zu Drupal, ist Typo3 jedoch ein Enterprise Content-Management-System und damit speziell für den Einsatz in Unternehmen&lt;sup&gt;&lt;a href=&quot;#3&quot;&gt;3&lt;/a&gt;&lt;/sup&gt; entwickelt worden. Wie bei &lt;a href=&quot;http://localhost:8080/articles/drupal&quot;&gt;Drupal&lt;/a&gt; gibt es auch bei Typo3 Erweiterungen zur Standardinstallation, die als Extensions im Typo3 “App Store” ausgewählt und über den built-in Extension-Manager des Content-Management-Systems installiert werden können. Zum Funktionsumfang der Core Installation gehören unter anderem eine granulierte Rechteverwaltung, die Möglichkeit für mehrsprachige Sites, responsive Templates und HTML5-Unterstützung, eine API für Extension-Developer und ein Suchindex über das Back- und Frontend.&lt;sup&gt;&lt;a href=&quot;#2&quot;&gt;2&lt;/a&gt;&lt;/sup&gt; &lt;/p&gt;
+&lt;h4 id=&quot;usability&quot;&gt;Usability&lt;/h4&gt;
+&lt;p&gt;Im Gegensatz zu &lt;a href=&quot;http://localhost:8080/articles/drupal&quot;&gt;Drupal&lt;/a&gt; besteht Typo3 (wie die meisten andren Content-Management-Systeme) aus einem Frontend für den Nutzer der Website und einem administrativen Backend mit hierarchischem Seitenbaum für den Bearbeiter. Mit Hilfe einer Extension kann beim Bearbeiten am Desktop die Vorschau der Ansicht auf Mobilgeräten mit eingeblendet werden. &lt;sup&gt;&lt;a href=&quot;#2&quot;&gt;2&lt;/a&gt;&lt;/sup&gt; Im Vergleich zu &lt;a href=&quot;http://localhost:8080/articles/drupal&quot;&gt;Drupal&lt;/a&gt; können viele Konfigurationen allerdings nur im TypoScript vorgenommen werden.&lt;/p&gt;
+&lt;h4 id=&quot;typoscript&quot;&gt;TypoScript&lt;/h4&gt;
+&lt;p&gt;TypoScript ist eine Metasprache, die ausschließlich beschreibend ist. Die Syntax von TypoScript basiert auf der hierarchischen Strukturierung von Informationen in ASCII text.&lt;sup&gt;&lt;a href=&quot;#5&quot;&gt;5&lt;/a&gt;&lt;/sup&gt; In Typo3 werden Konfigurationsparameter mit TypoScript definiert, d.h. Objekte verschiedener Typen werden erzeugt und ihnen die gewünschten Werte zugewiesen. Um von der Anwendung als Konfiguration verwendet werden zu können, wird das TypoScript geparst und in ein PHP-Array transformiert.&lt;sup&gt;&lt;a href=&quot;#6&quot;&gt;6&lt;/a&gt;&lt;/sup&gt; Mit TypoScript lassen sich nahezu alle Aspekte einer Typo3 Installation konfigurieren, was das System sehr viel Flexibilität verleiht. Gleichzeitig muss jedoch zusätzlich zur Syntax ein fundiertes Wissen über die Systemeigenschaften von Typo3 aufgebaut werden, um die Konfigurationsfreiheit voll ausschöpfen zu können.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt; page = PAGE
+ page.10 = TEXT
+ page.10.value = Hello, world!
+ page.10.wrap = &amp;lt;h2&amp;gt;|&amp;lt;/h2&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&quot;-die-typo3-community-hat-probleme-sup-7-7-sup-&quot;&gt;“Die Typo3 Community hat Probleme” &lt;sup&gt;&lt;a href=&quot;#7&quot;&gt;7&lt;/a&gt;&lt;/sup&gt;&lt;/h4&gt;
+&lt;p&gt;Während der Entwicklung der Typo3 Version 5.0 wurde das Projekt Neos in Form eines eigenen Development-Branches gergründet. Nachdem die Entwicklungszweige aufgrund der alten und complexen Codebasis von Typo3 stark außeinanderliefen, beschloß die Typo3 Community Neos als eigentständiges Produkt und unabhängig von Typo3 weiter zu entwickeln. Die Begründung für diese Entscheidung trifft das Neos Team foglendermaßen:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“The TYPO3 team and the Neos team have realized more and more that TYPO3 CMS and Neos are two very distinct products, with different requirements, different underlying assumptions of how a modern CMS should be built and different target groups.” &lt;sup&gt;&lt;a href=&quot;#8&quot;&gt;8&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;br&gt;                 &lt;/p&gt;
 &lt;hr&gt;
-&lt;p&gt;&lt;div class='footnotes'&gt;
-    &lt;a id='1'&gt;1&lt;/a&gt; Patrik Karisch, Webentwickler bei der pixelart GmbH, 68506 Salzburg, “Vorstellung Symphony Framework”, 19.01.2016&lt;/p&gt;
-</description>
+&lt;div class='footnotes'&gt; 
+    &lt;a id='1'&gt;1&lt;/a&gt; vgl. &lt;a href=&quot;https://typo3.org/about/&quot;&gt;https://typo3.org/about/&lt;/a&gt;&lt;br&gt;    &lt;a id='2'&gt;2&lt;/a&gt; vgl. &lt;a href=&quot;https://typo3.org/typo3-cms/key-features/&quot;&gt;https://typo3.org/typo3-cms/key-features/&lt;/a&gt;&lt;br&gt;    &lt;a id='3'&gt;3&lt;/a&gt; z.B. für den Betrieb eines firmeneigenen Intranets &lt;a href=&quot;http://www.typoblog.de/intranet-mit-typo3-cms/&quot;&gt;http://www.typoblog.de/intranet-mit-typo3-cms/&lt;/a&gt;&lt;br&gt;    &lt;a id='4'&gt;4&lt;/a&gt; vgl. &lt;a href=&quot;https://www.aoe.com/de/produkte/typo3.html&quot;&gt;https://www.aoe.com/de/produkte/typo3.html&lt;/a&gt;&lt;br&gt;    &lt;a id='5'&gt;5&lt;/a&gt; vgl. &lt;a href=&quot;https://docs.typo3.org/typo3cms/TyposcriptSyntaxReference/AppendixA/Index.html#what-is-typoscript&quot;&gt;https://docs.typo3.org/typo3cms/TyposcriptSyntaxReference/AppendixA/Index.html#what-is-typoscript&lt;/a&gt;&lt;br&gt;    &lt;a id='6'&gt;6&lt;/a&gt;  &lt;a href=&quot;https://docs.typo3.org/typo3cms/TyposcriptSyntaxReference/AppendixA/PhpArrays/Index.html&quot;&gt;https://docs.typo3.org/typo3cms/TyposcriptSyntaxReference/AppendixA/PhpArrays/Index.html&lt;/a&gt;&lt;br&gt;    &lt;a id='7'&gt;7&lt;/a&gt; Patrik Karisch, Webentwickler bei der pixelart GmbH, 68506 Salzburg, “Vorstellung Symphony Framework”, 19.01.2016&lt;br&gt;    &lt;a id='8'&gt;8&lt;/a&gt; vgl. &lt;a href=&quot;https://www.neos.io/learn/neos-split-faq.html#why-are-you-splitting-and-why-now&quot;&gt;https://www.neos.io/learn/neos-split-faq.html#why-are-you-splitting-and-why-now&lt;/a&gt;
+
+    Bild: &lt;a href=&quot;https://typo3.org/&quot;&gt;https://typo3.org/&lt;/a&gt;
+&lt;/div&gt;</description>
     </item>
   </channel>
 </rss>

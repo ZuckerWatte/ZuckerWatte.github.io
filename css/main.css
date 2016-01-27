@@ -69,9 +69,10 @@ li {
 }
 
 blockquote {
-  margin: 1.2em 3em;
+  margin: 1.2em 2em;
   padding-left: 1em;
   font-style: italic;
+  border-left: 3px solid #28a8c0;
 }
 
 hr {
